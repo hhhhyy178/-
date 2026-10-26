@@ -1,0 +1,34 @@
+import {z} from 'zod';
+import {lessons,words,grade,unlocked,schedule} from './learning';
+import {offline,modes} from './offline-tutor';
+type Attempt={id:number;exerciseId:string;knowledgeId:string;skill:string;answer:string;correct:boolean;createdAt:string};
+type Review={wordId:string;repetitions:number;interval:number;ease:number;due:string};
+export type BrowserState={profile:{id:number;name:string;goal:number};progress:{lessonId:string;completedAt:string}[];attempts:Attempt[];reviews:Review[];history:{id:number;wordId:string;quality:number;createdAt:string}[];sessions:{id:number;seconds:number;createdAt:string}[];conversations:{id:number;mode:string;question:string;answer:string;createdAt:string}[];aiEnabled:false};
+export function emptyState():BrowserState{return {profile:{id:1,name:'学习者',goal:15},progress:[],attempts:[],reviews:[],history:[],sessions:[],conversations:[],aiEnabled:false};}
+const instant=z.string().refine(s=>Number.isFinite(new Date(s).getTime()),'日期无效');
+const backupSchema=z.object({version:z.literal(1),profile:z.object({name:z.string().max(100).default('学习者'),goal:z.union([z.literal(15),z.literal(30),z.literal(45),z.literal(60)])}),progress:z.array(z.object({lessonId:z.string().refine(id=>lessons.some(l=>l.id===id)),completedAt:instant})).max(28),attempts:z.array(z.object({exerciseId:z.string().refine(id=>lessons.some(l=>l.exercises.some(e=>e.id===id))),knowledgeId:z.string().max(100),skill:z.enum(['reading','writing','listening','speaking']),answer:z.string().max(1000),correct:z.boolean(),createdAt:instant})).max(100000),reviews:z.array(z.object({wordId:z.string().refine(id=>words.some(w=>w.id===id)),repetitions:z.number().int().min(0),interval:z.number().int().min(0),ease:z.number().min(1.3).max(100),due:instant})).max(words.length),history:z.array(z.object({wordId:z.string().refine(id=>words.some(w=>w.id===id)),quality:z.number().int().min(0).max(5),createdAt:instant})).max(100000),sessions:z.array(z.object({seconds:z.number().int().min(1).max(60),createdAt:instant})).max(1000000),conversations:z.array(z.object({mode:z.string().max(50),question:z.string().max(3000),answer:z.string().max(50000),createdAt:instant})).max(10000).default([])});
+export function parseBrowserBackup(input:unknown):BrowserState{const d=backupSchema.parse(input);return {profile:{id:1,...d.profile},progress:d.progress,attempts:d.attempts.map((v,i)=>({...v,id:i+1})),reviews:d.reviews,history:d.history.map((v,i)=>({...v,id:i+1})),sessions:d.sessions.map((v,i)=>({...v,id:i+1})),conversations:d.conversations.map((v,i)=>({...v,id:i+1})),aiEnabled:false};}
+// The mutation and write run inside one IndexedDB readwrite transaction. Tabs
+// cannot overwrite each other's answers with stale snapshots.
+function openDatabase():Promise<IDBDatabase>{return new Promise((resolve,reject)=>{if(!window.indexedDB){reject(Error('此浏览器无法使用本地数据库，请用 Safari 普通浏览模式打开。'));return;}const req=indexedDB.open('bonjourlab-mobile',1);req.onupgradeneeded=()=>req.result.createObjectStore('learning');req.onerror=()=>reject(Error('无法打开学习数据库，请检查浏览器存储权限。'));req.onblocked=()=>reject(Error('数据库升级被其他页面阻止，请关闭其他 BonjourLab 标签页。'));req.onsuccess=()=>resolve(req.result);});}
+export async function withBrowserState<T>(operation:(state:BrowserState)=>T,write=true):Promise<T>{const db=await openDatabase();return new Promise((resolve,reject)=>{const tx=db.transaction('learning',write?'readwrite':'readonly');const store=tx.objectStore('learning');let result:T;let error:unknown;const req=store.get('primary');req.onsuccess=()=>{try{const state=(req.result as BrowserState|undefined)||emptyState();result=operation(state);if(write)store.put(state,'primary');}catch(e){error=e;tx.abort();}};tx.oncomplete=()=>{db.close();resolve(result)};tx.onabort=()=>{db.close();reject(error||Error('保存失败，可能是手机存储空间不足；请导出备份。'))};tx.onerror=()=>{error=error||Error('读取或保存学习数据失败。')};});}
+export function applyBrowserOperation(state:BrowserState,path:string,input?:unknown,method='POST',now=new Date()):unknown{
+ const stamp=now.toISOString();
+ if(path==='/api/state'&&input===undefined)return structuredClone(state);
+ if(path==='/api/state'&&method==='PATCH'){const {goal}=z.object({goal:z.union([z.literal(15),z.literal(30),z.literal(45),z.literal(60)])}).parse(input);state.profile.goal=goal;return state.profile;}
+ if(path==='/api/backup'&&input===undefined)return {version:1,exportedAt:stamp,...structuredClone(state)};
+ if(path==='/api/backup'){const restored=parseBrowserBackup(input);Object.assign(state,restored);return {ok:true};}
+ if(path==='/api/attempt'){
+ const {exerciseId,answer}=z.object({exerciseId:z.string(),answer:z.string().min(1).max(1000)}).parse(input);
+ const lesson=lessons.find(l=>l.exercises.some(e=>e.id===exerciseId));if(!lesson)throw Error('题目不存在');if(!unlocked(lesson.id,state.progress.map(p=>p.lessonId)))throw Error('请先完成前一节课');
+ const exercise=lesson.exercises.find(e=>e.id===exerciseId)!;const correct=grade(answer,exercise.answers);state.attempts.push({id:state.attempts.length+1,exerciseId,knowledgeId:exercise.knowledgeId,skill:exercise.skill,answer,correct,createdAt:stamp});
+ const complete=lesson.exercises.every(e=>state.attempts.some(a=>a.exerciseId===e.id&&a.correct));
+ if(complete){if(!state.progress.some(p=>p.lessonId===lesson.id))state.progress.push({lessonId:lesson.id,completedAt:stamp});for(const wordId of lesson.words)if(!state.reviews.some(r=>r.wordId===wordId))state.reviews.push({wordId,repetitions:0,interval:0,ease:2.5,due:stamp});}
+ return {correct,complete,answers:exercise.answers,explanation:exercise.explanation};
+ }
+ if(path==='/api/review'){const {wordId,quality}=z.object({wordId:z.string(),quality:z.number().int().min(0).max(5)}).parse(input);const r=state.reviews.find(r=>r.wordId===wordId);if(!r)throw Error('请先学习所属课程');if(new Date(r.due)>now)throw Error('此单词尚未到复习时间');const next=schedule(r,quality,now);Object.assign(r,{...next,due:next.due.toISOString()});state.history.push({id:state.history.length+1,wordId,quality,createdAt:stamp});return r;}
+ if(path==='/api/session'){const {seconds}=z.object({seconds:z.number().int().min(1).max(60)}).parse(input);state.sessions.push({id:state.sessions.length+1,seconds,createdAt:stamp});return {ok:true};}
+ if(path==='/api/tutor'){const {message,mode}=z.object({message:z.string().min(1).max(3000),mode:z.enum(modes)}).parse(input);const weak=lessons.map(l=>({l,n:state.attempts.filter(a=>a.knowledgeId===l.knowledgeId&&!a.correct).length})).filter(v=>v.n).sort((a,b)=>b.n-a.n).slice(0,3).map(v=>`${v.l.title}：${v.n} 次错误`).join('；');const answer=offline(message,mode,weak);state.conversations.push({id:state.conversations.length+1,mode,question:message,answer,createdAt:stamp});return {answer,source:'手机本地预设规则（非大模型）'};}
+ throw Error('不支持的本地操作');
+}
+export async function browserRequest(path:string,input?:unknown,method='POST'){return withBrowserState(s=>applyBrowserOperation(s,path,input,method),input!==undefined);}

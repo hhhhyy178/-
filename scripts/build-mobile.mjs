@@ -1,0 +1,25 @@
+import {build} from 'esbuild';
+import {createHash} from 'node:crypto';
+import {mkdirSync,writeFileSync,readFileSync,renameSync,readdirSync,unlinkSync} from 'node:fs';
+import {deflateSync} from 'node:zlib';
+const out='docs';mkdirSync(out,{recursive:true});
+// Remove only artifacts produced by this builder, never user data or source files.
+for(const name of readdirSync(out))if(/^(app-[a-f0-9]+\.(js|css)|app\.(js|css)|index\.html|sw\.js|manifest\.webmanifest|icon-(192|512)\.png|apple-touch-icon\.png|\.nojekyll)$/.test(name))unlinkSync(`${out}/${name}`);
+await build({entryPoints:['mobile/index.tsx'],bundle:true,outfile:`${out}/app.js`,minify:true,platform:'browser',format:'esm',target:['safari16'],jsx:'automatic',define:{'process.env.NODE_ENV':'"production"','process.env.NEXT_PUBLIC_LOCAL_MODE':'"true"'},tsconfig:'tsconfig.json',logLevel:'info'});
+const hash=createHash('sha256').update(readFileSync(`${out}/app.js`)).update(readFileSync(`${out}/app.css`)).update(readFileSync(new URL(import.meta.url))).digest('hex').slice(0,16);
+renameSync(`${out}/app.js`,`${out}/app-${hash}.js`);renameSync(`${out}/app.css`,`${out}/app-${hash}.css`);
+// Generate a small deterministic PNG app icon without native build dependencies.
+function crc32(buf){let c=0xffffffff;for(const byte of buf){c^=byte;for(let i=0;i<8;i++)c=(c>>>1)^((c&1)?0xedb88320:0)}return (c^0xffffffff)>>>0}
+function chunk(type,data){const tag=Buffer.from(type),len=Buffer.alloc(4),sum=Buffer.alloc(4);len.writeUInt32BE(data.length);sum.writeUInt32BE(crc32(Buffer.concat([tag,data])));return Buffer.concat([len,tag,data,sum])}
+function icon(size){const rows=[];const glyph=['11110','10001','10001','11110','10001','10001','11110'];for(let y=0;y<size;y++){const row=Buffer.alloc(size*4+1);for(let x=0;x<size;x++){let color=[32,61,131,255];const gx=Math.floor((x/size-.28)/.075),gy=Math.floor((y/size-.23)/.075);if(gx>=0&&gx<5&&gy>=0&&gy<7&&glyph[gy][gx]==='1')color=[255,255,250,255];if((x-size*.76)**2+(y-size*.75)**2<(size*.045)**2)color=[220,130,120,255];row.set(color,1+x*4)}rows.push(row)}const h=Buffer.alloc(13);h.writeUInt32BE(size,0);h.writeUInt32BE(size,4);h[8]=8;h[9]=6;return Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),chunk('IHDR',h),chunk('IDAT',deflateSync(Buffer.concat(rows))),chunk('IEND',Buffer.alloc(0))])}
+for(const size of [192,512])writeFileSync(`${out}/icon-${size}.png`,icon(size));writeFileSync(`${out}/apple-touch-icon.png`,icon(180));
+writeFileSync(`${out}/manifest.webmanifest`,JSON.stringify({id:'./',name:'BonjourLab 法语学习',short_name:'BonjourLab',description:'中文零基础法语学习，课程与进度保存在本机。',lang:'zh-CN',start_url:'./',scope:'./',display:'standalone',background_color:'#f7f8fb',theme_color:'#203d83',icons:[{src:'./icon-192.png',sizes:'192x192',type:'image/png',purpose:'any'},{src:'./icon-512.png',sizes:'512x512',type:'image/png',purpose:'any maskable'}]},null,2));
+writeFileSync(`${out}/index.html`,`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#203d83"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="BonjourLab"><meta name="description" content="28 节零基础法语课程，支持 iPhone 离线学习与本机进度保存。"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./apple-touch-icon.png"><link rel="icon" href="./icon-192.png"><link rel="stylesheet" href="./app-${hash}.css"><title>BonjourLab · 法语随身学</title></head><body><div id="root"></div><noscript>BonjourLab 需要启用 JavaScript，才能将课程与学习进度保存在本机。</noscript><script type="module" src="./app-${hash}.js"></script></body></html>`);
+const assets=['./','./index.html',`./app-${hash}.js`,`./app-${hash}.css`,'./manifest.webmanifest','./icon-192.png','./icon-512.png','./apple-touch-icon.png'];
+writeFileSync(`${out}/sw.js`,`const CACHE='bonjourlab-mobile-${hash}';const ASSETS=${JSON.stringify(assets)};
+self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
+self.addEventListener('activate',event=>event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('bonjourlab-mobile-')&&key!==CACHE).map(key=>caches.delete(key)))),self.clients.claim()])));
+self.addEventListener('message',event=>{if(event.data?.type==='ACTIVATE_UPDATE')self.skipWaiting()});
+self.addEventListener('fetch',event=>{const req=event.request;const url=new URL(req.url);const base=new URL('./',self.location.href);if(req.method!=='GET'||url.origin!==base.origin||!url.pathname.startsWith(base.pathname))return;if(req.mode==='navigate'){event.respondWith(caches.open(CACHE).then(async cache=>{try{const r=await fetch(req);if(r.ok)return r;return (await cache.match('./index.html'))||r;}catch{return (await cache.match('./index.html'))||Response.error()}}));return;}event.respondWith(caches.match(req).then(cached=>cached||fetch(req)));});
+`);
+writeFileSync(`${out}/.nojekyll`,'');console.log(`Mobile offline app built: ${hash}`);

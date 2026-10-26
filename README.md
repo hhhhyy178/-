@@ -2,6 +2,12 @@
 
 面向中文母语初学者的个人法语学习应用。28 节四周入门课覆盖 A0 与部分 A1 基础，并非完整 A1 认证课程。无需账号，也无需 AI 密钥。
 
+## iPhone / iPad 手机版
+
+手机端已经提供可添加到主屏幕的本地离线网页版本，无需 Windows 程序。详见 **[手机使用与部署说明](MOBILE_README.md)**。
+
+首次启用 GitHub Pages 需要仓库所有者在 [Pages 设置](https://github.com/hhhhyy178/-/settings/pages) 选择 **main /docs** 并保存；启用后通过 **https://hhhhyy178.github.io/-/** 使用。学习数据只存在手机本地，不会自动同步其他设备；支持 JSON 备份迁移。
+
 ## 免安装包：只需下载、解压、双击
 
 **[直接下载 Windows 免安装包（约 65 MB）](https://github.com/hhhhyy178/-/raw/refs/heads/main/downloads/BonjourLab-Windows.zip)** · [下载目录与说明](downloads/README.md)

@@ -9,7 +9,9 @@
     "db:setup": "node --env-file-if-exists=.env scripts/init-db.mjs",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "package:windows": "node scripts/package-windows.mjs"
+    "package:windows": "node scripts/package-windows.mjs",
+    "build:mobile": "node scripts/build-mobile.mjs",
+    "test:mobile": "playwright test --config playwright.mobile.config.ts"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
@@ -23,6 +25,7 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "esbuild": "^0.28.2",
     "typescript": "^5.7.0",
     "vitest": "^3.2.0"
   },

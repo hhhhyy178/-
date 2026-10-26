@@ -3,7 +3,8 @@ import {useState} from 'react';
 import {Exercise} from '@/lib/learning';
 import {Speak} from './Speech';
 const types:Record<string,string>={choice:'单项选择',listening:'听力选择',spelling:'单词拼写',translation:'中法翻译',order:'句子排序',fill:'填空',conjugation:'动词变位',gender:'阴阳性判断',pronunciation:'发音辨认',dialogue:'对话理解'};
-export async function request(path:string,data?:unknown,method='POST'){const r=await fetch(path,data===undefined?undefined:{method,headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});const v=await r.json();if(!r.ok)throw Error(v.error||'请求失败');return v;}
+export {request} from '@/lib/client';
+import {request} from '@/lib/client';
 export function ExerciseCard({exercise:e,onSaved,passed}:{exercise:Exercise;onSaved:()=>void;passed:boolean}){
  const [answer,setAnswer]=useState(''),[feedback,setFeedback]=useState<{correct:boolean;explanation:string;answers:string[]}|null>(null),[busy,setBusy]=useState(false),[error,setError]=useState('');
  async function submit(){setBusy(true);setError('');try{setFeedback(await request('/api/attempt',{exerciseId:e.id,answer}));onSaved();}catch(e){setError((e as Error).message);}finally{setBusy(false);}}
