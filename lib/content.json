@@ -1,0 +1,2103 @@
+{
+  "lessons": [
+    {
+      "id": "day-1",
+      "day": 1,
+      "title": "初次见面，Bonjour！",
+      "goal": "认识法语的声音，使用三种基本礼貌表达。",
+      "explanation": "法语用拉丁字母书写，字母和声音并非一一对应。音标写在 / / 内，表示声音，不是字母名。Bonjour 是通用的日间问候，Salut 适合熟人，Merci 用于感谢。不要用中文谐音代替聆听。",
+      "example": "Bonjour !",
+      "translation": "你好！",
+      "words": [
+        "w1-0",
+        "w1-1",
+        "w1-2"
+      ],
+      "knowledgeId": "k1",
+      "prerequisite": null,
+      "level": "A0",
+      "exercises": [
+        {
+          "id": "day-1-q1",
+          "type": "choice",
+          "prompt": "日间对陌生人打招呼，选哪一句？",
+          "options": [
+            "Bonjour",
+            "Merci",
+            "Au revoir"
+          ],
+          "answers": [
+            "Bonjour"
+          ],
+          "explanation": "Merci 表达感谢；Bonjour 用于见面问候。",
+          "knowledgeId": "k1",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-1-q2",
+          "type": "spelling",
+          "prompt": "对方帮助你后，写出“谢谢”的法语。",
+          "answers": [
+            "merci"
+          ],
+          "explanation": "Merci 表达感谢；Bonjour 用于见面问候。",
+          "knowledgeId": "k1",
+          "skill": "writing"
+        }
+      ],
+      "summary": "Merci 表达感谢；Bonjour 用于见面问候。"
+    },
+    {
+      "id": "day-2",
+      "day": 2,
+      "title": "元音：嘴唇与舌头的实验",
+      "goal": "区分 /i/、/y/ 和 /u/。",
+      "explanation": "/i/ 舌位靠前，嘴唇展开；保持这个舌位并圆唇可接近 /y/。/u/ 则舌位靠后、圆唇。法语 u 通常读 /y/，ou 通常读 /u/。tu 和 tout 只在元音上不同，不能都记成“乌”。",
+      "example": "Tu lis tout.",
+      "translation": "你读所有内容。（此处只观察 tu /ty/ 和 tout /tu/）",
+      "words": [
+        "w2-0",
+        "w2-1"
+      ],
+      "knowledgeId": "k2",
+      "prerequisite": "day-1",
+      "level": "A0",
+      "exercises": [
+        {
+          "id": "day-2-q1",
+          "type": "listening",
+          "prompt": "听音辨认：播放后选出对应词。",
+          "options": [
+            "tu",
+            "tout"
+          ],
+          "answers": [
+            "tu"
+          ],
+          "explanation": "tu /ty/ 舌位靠前，tout /tu/ 舌位靠后。",
+          "knowledgeId": "k2",
+          "skill": "listening",
+          "audio": "tu"
+        },
+        {
+          "id": "day-2-q2",
+          "type": "fill",
+          "prompt": "字母组合 ou 通常对应哪个 IPA？",
+          "answers": [
+            "/u/"
+          ],
+          "explanation": "tu /ty/ 舌位靠前，tout /tu/ 舌位靠后。",
+          "knowledgeId": "k2",
+          "skill": "writing"
+        }
+      ],
+      "summary": "tu /ty/ 舌位靠前，tout /tu/ 舌位靠后。"
+    },
+    {
+      "id": "day-3",
+      "day": 3,
+      "title": "鼻化元音：让气流经过鼻腔",
+      "goal": "辨别 /ɑ̃/、/ɛ̃/ 和 /ɔ̃/。",
+      "explanation": "鼻化元音让气流同时经过口腔和鼻腔，不要额外加 n 或 ng。an/en 常读 /ɑ̃/，in/ain 常读 /ɛ̃/，on 常读 /ɔ̃/。许多法国说话者将 /œ̃/ 合并到 /ɛ̃/；并非所有地区都一样。",
+      "example": "Bon pain.",
+      "translation": "好面包。",
+      "words": [
+        "w3-0",
+        "w3-1"
+      ],
+      "knowledgeId": "k3",
+      "prerequisite": "day-2",
+      "level": "A0",
+      "exercises": [
+        {
+          "id": "day-3-q1",
+          "type": "pronunciation",
+          "prompt": "bon 中的鼻化元音是哪一个？",
+          "options": [
+            "/ɔ̃/",
+            "/ɑ̃/",
+            "/ɛ̃/"
+          ],
+          "answers": [
+            "/ɔ̃/"
+          ],
+          "explanation": "bon 的 on 是 /ɔ̃/；pain 的 ain 是 /ɛ̃/，词末 n 不另发音。",
+          "knowledgeId": "k3",
+          "skill": "listening",
+          "audio": null
+        },
+        {
+          "id": "day-3-q2",
+          "type": "spelling",
+          "prompt": "写出“面包”的法语。",
+          "answers": [
+            "pain"
+          ],
+          "explanation": "bon 的 on 是 /ɔ̃/；pain 的 ain 是 /ɛ̃/，词末 n 不另发音。",
+          "knowledgeId": "k3",
+          "skill": "writing"
+        }
+      ],
+      "summary": "bon 的 on 是 /ɔ̃/；pain 的 ain 是 /ɛ̃/，词末 n 不另发音。"
+    },
+    {
+      "id": "day-4",
+      "day": 4,
+      "title": "辅音与字母组合",
+      "goal": "了解 /ʁ/、/ʒ/、/ʃ/ 及 ou、oi、eau。",
+      "explanation": "法语 R 常为小舌音 /ʁ/，放松舌尖，在口腔后部形成摩擦，不必用力咳嗽。ch 常为 /ʃ/，j 常为 /ʒ/。ou → /u/，oi → /wa/，au/eau → /o/，ai/ei 常为 /ɛ/（词形和语境会影响）。",
+      "example": "Je bois de l’eau.",
+      "translation": "我喝水。（先观察 eau 的发音）",
+      "words": [
+        "w4-0",
+        "w4-1"
+      ],
+      "knowledgeId": "k4",
+      "prerequisite": "day-3",
+      "level": "A0",
+      "exercises": [
+        {
+          "id": "day-4-q1",
+          "type": "choice",
+          "prompt": "eau 的发音是？",
+          "options": [
+            "/o/",
+            "/u/",
+            "/wa/"
+          ],
+          "answers": [
+            "/o/"
+          ],
+          "explanation": "eau 虽有三个字母，只表示一个元音 /o/。",
+          "knowledgeId": "k4",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-4-q2",
+          "type": "fill",
+          "prompt": "chat 的 ch 对应哪个 IPA？",
+          "answers": [
+            "/ʃ/"
+          ],
+          "explanation": "eau 虽有三个字母，只表示一个元音 /o/。",
+          "knowledgeId": "k4",
+          "skill": "writing"
+        }
+      ],
+      "summary": "eau 虽有三个字母，只表示一个元音 /o/。"
+    },
+    {
+      "id": "day-5",
+      "day": 5,
+      "title": "一天中的问候与告别",
+      "goal": "根据时间和关系选择问候。",
+      "explanation": "Bonjour 通用于白天，Bonsoir 常用于傍晚见面；Bonne nuit 是睡前道晚安。Au revoir 用于告别。词末辅音经常不读，但 merci 的 r、avec 的 c 等说明不能机械套用。",
+      "example": "Bonsoir ! Au revoir !",
+      "translation": "晚上好！再见！",
+      "words": [
+        "w5-0",
+        "w5-1"
+      ],
+      "knowledgeId": "k5",
+      "prerequisite": "day-4",
+      "level": "A0",
+      "exercises": [
+        {
+          "id": "day-5-q1",
+          "type": "choice",
+          "prompt": "傍晚见面说什么？",
+          "options": [
+            "Bonsoir",
+            "Bonne nuit",
+            "Merci"
+          ],
+          "answers": [
+            "Bonsoir"
+          ],
+          "explanation": "Bonsoir 是见面问候，Bonne nuit 是睡前祝愿。",
+          "knowledgeId": "k5",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-5-q2",
+          "type": "translation",
+          "prompt": "写出正式告别用语。",
+          "answers": [
+            "au revoir",
+            "au revoir !"
+          ],
+          "explanation": "Bonsoir 是见面问候，Bonne nuit 是睡前祝愿。",
+          "knowledgeId": "k5",
+          "skill": "writing"
+        }
+      ],
+      "summary": "Bonsoir 是见面问候，Bonne nuit 是睡前祝愿。"
+    },
+    {
+      "id": "day-6",
+      "day": 6,
+      "title": "认识主语：我、你、他、她",
+      "goal": "使用 je、tu、il、elle 和自我介绍。",
+      "explanation": "Je 是我，tu 是你，il 是他，elle 是她。法语通常需要显式主语。Je m’appelle… 表示“我叫……”，先把它作为整体表达掌握；元音前 je 缩写为 j’。",
+      "example": "Je m’appelle Lin.",
+      "translation": "我叫 Lin。",
+      "words": [
+        "w6-0",
+        "w6-1"
+      ],
+      "knowledgeId": "k6",
+      "prerequisite": "day-5",
+      "level": "A0",
+      "exercises": [
+        {
+          "id": "day-6-q1",
+          "type": "choice",
+          "prompt": "“她”对应哪个词？",
+          "options": [
+            "elle",
+            "il",
+            "tu"
+          ],
+          "answers": [
+            "elle"
+          ],
+          "explanation": "Je m’appelle 是自我介绍的固定表达，不能省略主语。",
+          "knowledgeId": "k6",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-6-q2",
+          "type": "fill",
+          "prompt": "补全：___ m’appelle Lin.",
+          "answers": [
+            "je"
+          ],
+          "explanation": "Je m’appelle 是自我介绍的固定表达，不能省略主语。",
+          "knowledgeId": "k6",
+          "skill": "writing"
+        }
+      ],
+      "summary": "Je m’appelle 是自我介绍的固定表达，不能省略主语。"
+    },
+    {
+      "id": "day-7",
+      "day": 7,
+      "title": "第一周回顾：把声音变成交流",
+      "goal": "回忆问候与发音区别。",
+      "explanation": "先主动回忆再看答案。/y/ 和 /u/ 都圆唇但舌位不同；Bonjour 的 on 鼻化，不读出独立 n。陌生人见面用 Bonjour，受到帮助用 Merci，告别用 Au revoir。",
+      "example": "Bonjour ! Je m’appelle Lin. Merci !",
+      "translation": "你好！我叫 Lin。谢谢！",
+      "words": [
+        "w7-0",
+        "w7-1"
+      ],
+      "knowledgeId": "k7",
+      "prerequisite": "day-6",
+      "level": "A0",
+      "exercises": [
+        {
+          "id": "day-7-q1",
+          "type": "dialogue",
+          "prompt": "别人说 Merci，你判断他在做什么？",
+          "options": [
+            "道谢",
+            "告别",
+            "自我介绍"
+          ],
+          "answers": [
+            "道谢"
+          ],
+          "explanation": "tu 读 /ty/；/tu/ 对应 tout。本课检索第一周的表达。",
+          "knowledgeId": "k7",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-7-q2",
+          "type": "fill",
+          "prompt": "写出 tu 的 IPA。",
+          "answers": [
+            "/ty/"
+          ],
+          "explanation": "tu 读 /ty/；/tu/ 对应 tout。本课检索第一周的表达。",
+          "knowledgeId": "k7",
+          "skill": "writing"
+        },
+        {
+          "id": "day-7-q3",
+          "type": "translation",
+          "prompt": "把“你好！我叫 Lin。”写成法语。",
+          "answers": [
+            "bonjour ! je m’appelle lin",
+            "bonjour, je m’appelle lin"
+          ],
+          "explanation": "问候后可以用 Je m’appelle 自我介绍。",
+          "knowledgeId": "k7",
+          "skill": "writing"
+        }
+      ],
+      "summary": "tu 读 /ty/；/tu/ 对应 tout。本课检索第一周的表达。"
+    },
+    {
+      "id": "day-8",
+      "day": 8,
+      "title": "être：构建第一个句子",
+      "goal": "掌握 être 的现在时和身份表达。",
+      "explanation": "être 是“是、处于某状态”。现在时：je suis、tu es、il/elle est、nous sommes、vous êtes、ils/elles sont。动词跟随主语变化，不能总用原形 être。单纯说明职业通常不加冠词：Je suis étudiant / étudiante。",
+      "example": "Je suis étudiant. Elle est étudiante.",
+      "translation": "我是男学生。她是女学生。",
+      "words": [
+        "w8-0",
+        "w8-1"
+      ],
+      "knowledgeId": "k8",
+      "prerequisite": "day-7",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-8-q1",
+          "type": "conjugation",
+          "prompt": "Je ___ étudiant.",
+          "options": [
+            "suis",
+            "es",
+            "est"
+          ],
+          "answers": [
+            "suis"
+          ],
+          "explanation": "je 配 suis，elle 配 est。职业身份表达常省略冠词。",
+          "knowledgeId": "k8",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-8-q2",
+          "type": "fill",
+          "prompt": "补全：Elle ___ étudiante.",
+          "answers": [
+            "est"
+          ],
+          "explanation": "je 配 suis，elle 配 est。职业身份表达常省略冠词。",
+          "knowledgeId": "k8",
+          "skill": "writing"
+        },
+        {
+          "id": "day-8-q3",
+          "type": "conjugation",
+          "prompt": "补全：Vous ___ étudiant.",
+          "answers": [
+            "êtes"
+          ],
+          "explanation": "vous 配 êtes，必须保留 ê。",
+          "knowledgeId": "k8",
+          "skill": "writing"
+        },
+        {
+          "id": "day-8-q4",
+          "type": "translation",
+          "prompt": "“我们是学生”写成法语。",
+          "answers": [
+            "nous sommes étudiants",
+            "nous sommes étudiantes"
+          ],
+          "explanation": "nous 配 sommes；多位学生要写复数；全女性组可用 étudiantes。",
+          "knowledgeId": "k8",
+          "skill": "writing"
+        }
+      ],
+      "summary": "je 配 suis，elle 配 est。职业身份表达常省略冠词。"
+    },
+    {
+      "id": "day-9",
+      "day": 9,
+      "title": "avoir：拥有与年龄",
+      "goal": "掌握 avoir 变位及年龄表达。",
+      "explanation": "avoir 是“有”：j’ai、tu as、il/elle a、nous avons、vous avez、ils/elles ont。je 在 ai 前省音为 j’。法语年龄用 avoir，不用 être：J’ai vingt ans。",
+      "example": "J’ai un livre.",
+      "translation": "我有一本书。",
+      "words": [
+        "w9-0",
+        "w9-1"
+      ],
+      "knowledgeId": "k9",
+      "prerequisite": "day-8",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-9-q1",
+          "type": "conjugation",
+          "prompt": "“我有”应选哪一个？",
+          "options": [
+            "j’ai",
+            "je suis",
+            "je avoir"
+          ],
+          "answers": [
+            "j’ai"
+          ],
+          "explanation": "avoir 随主语变化。年龄也用 avoir。",
+          "knowledgeId": "k9",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-9-q2",
+          "type": "fill",
+          "prompt": "补全：Tu ___ un livre.",
+          "answers": [
+            "as"
+          ],
+          "explanation": "avoir 随主语变化。年龄也用 avoir。",
+          "knowledgeId": "k9",
+          "skill": "writing"
+        },
+        {
+          "id": "day-9-q3",
+          "type": "conjugation",
+          "prompt": "补全：Nous ___ un livre.",
+          "answers": [
+            "avons"
+          ],
+          "explanation": "nous 配 avons。",
+          "knowledgeId": "k9",
+          "skill": "writing"
+        }
+      ],
+      "summary": "avoir 随主语变化。年龄也用 avoir。"
+    },
+    {
+      "id": "day-10",
+      "day": 10,
+      "title": "名词阴阳性",
+      "goal": "把冠词与名词作为一组记忆。",
+      "explanation": "法语名词有语法性别，物品也有阴阳性，与现实性别无关。un livre（一本书）是阳性，une table（一张桌子）是阴性。词尾能提供线索，但有例外；不要只凭词尾判断。",
+      "example": "Une table et un livre.",
+      "translation": "一张桌子和一本书。",
+      "words": [
+        "w10-0",
+        "w10-1"
+      ],
+      "knowledgeId": "k10",
+      "prerequisite": "day-9",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-10-q1",
+          "type": "gender",
+          "prompt": "table 是什么性别？",
+          "options": [
+            "阴性",
+            "阳性"
+          ],
+          "answers": [
+            "阴性"
+          ],
+          "explanation": "livre 表示书时是阳性；table 是阴性，需连冠词一起记。",
+          "knowledgeId": "k10",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-10-q2",
+          "type": "fill",
+          "prompt": "补全：___ livre（一本书）。",
+          "answers": [
+            "un"
+          ],
+          "explanation": "livre 表示书时是阳性；table 是阴性，需连冠词一起记。",
+          "knowledgeId": "k10",
+          "skill": "writing"
+        },
+        {
+          "id": "day-10-q3",
+          "type": "fill",
+          "prompt": "补全：___ table（非特指的一张桌子）。",
+          "answers": [
+            "une"
+          ],
+          "explanation": "table 是阴性单数，使用 une。",
+          "knowledgeId": "k10",
+          "skill": "writing"
+        }
+      ],
+      "summary": "livre 表示书时是阳性；table 是阴性，需连冠词一起记。"
+    },
+    {
+      "id": "day-11",
+      "day": 11,
+      "title": "冠词与单复数",
+      "goal": "区分 un/une/des 与 le/la/les。",
+      "explanation": "不特指用 un（阳单）、une（阴单）、des（复数）；特指或泛指类别用 le、la、les。元音或哑音 h 前 le/la 变成 l’。普通名词复数常加 s，通常不发音，但也有特殊形式。",
+      "example": "Un livre. Le livre. Des livres.",
+      "translation": "一本书。这本书。一些书。",
+      "words": [
+        "w11-0",
+        "w11-1"
+      ],
+      "knowledgeId": "k11",
+      "prerequisite": "day-10",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-11-q1",
+          "type": "choice",
+          "prompt": "une table 的复数是？",
+          "options": [
+            "des tables",
+            "un tables",
+            "une tables"
+          ],
+          "answers": [
+            "des tables"
+          ],
+          "explanation": "复数用 des 或 les，不继续使用单数冠词 une。",
+          "knowledgeId": "k11",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-11-q2",
+          "type": "fill",
+          "prompt": "补全：___ table（这张桌子）。",
+          "answers": [
+            "la"
+          ],
+          "explanation": "复数用 des 或 les，不继续使用单数冠词 une。",
+          "knowledgeId": "k11",
+          "skill": "writing"
+        },
+        {
+          "id": "day-11-q3",
+          "type": "fill",
+          "prompt": "把 un livre 改成非特指的复数。",
+          "answers": [
+            "des livres"
+          ],
+          "explanation": "冠词变 des，livre 加 s。",
+          "knowledgeId": "k11",
+          "skill": "writing"
+        }
+      ],
+      "summary": "复数用 des 或 les，不继续使用单数冠词 une。"
+    },
+    {
+      "id": "day-12",
+      "day": 12,
+      "title": "开始提问",
+      "goal": "使用语调和 est-ce que 提问。",
+      "explanation": "最简单的问题可保留陈述句语序并用升调：Tu es étudiant ? 也可用 Est-ce que tu es étudiant ? est-ce que 是提问框架，不需要逐词翻译。Qui 问人，où 问地点。正式倒装留到后续。",
+      "example": "Est-ce que tu es étudiant ? Oui.",
+      "translation": "你是学生吗？是的。",
+      "words": [
+        "w12-0",
+        "w12-1"
+      ],
+      "knowledgeId": "k12",
+      "prerequisite": "day-11",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-12-q1",
+          "type": "choice",
+          "prompt": "想问地点使用哪个词？",
+          "options": [
+            "où",
+            "qui",
+            "merci"
+          ],
+          "answers": [
+            "où"
+          ],
+          "explanation": "语调问句保留主语—动词顺序；où 的重音符号不能省略。",
+          "knowledgeId": "k12",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-12-q2",
+          "type": "order",
+          "prompt": "将词排列成问句：es / tu / étudiant。",
+          "answers": [
+            "tu es étudiant"
+          ],
+          "explanation": "语调问句保留主语—动词顺序；où 的重音符号不能省略。",
+          "knowledgeId": "k12",
+          "skill": "writing"
+        }
+      ],
+      "summary": "语调问句保留主语—动词顺序；où 的重音符号不能省略。"
+    },
+    {
+      "id": "day-13",
+      "day": 13,
+      "title": "自我介绍：名字、年龄、国籍",
+      "goal": "组合已学句型介绍自己。",
+      "explanation": "Je m’appelle Lin. J’ai vingt ans. Je suis chinois / chinoise. 国籍形容词随所指人的性别变化，通常小写。中国男性可说 chinois，女性可说 chinoise。不要把中文“是二十岁”直译为 être。",
+      "example": "Je suis chinoise. J’ai vingt ans.",
+      "translation": "我是中国女性。我二十岁。",
+      "words": [
+        "w13-0",
+        "w13-1"
+      ],
+      "knowledgeId": "k13",
+      "prerequisite": "day-12",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-13-q1",
+          "type": "choice",
+          "prompt": "表达二十岁选哪句？",
+          "options": [
+            "J’ai vingt ans.",
+            "Je suis vingt ans."
+          ],
+          "answers": [
+            "J’ai vingt ans."
+          ],
+          "explanation": "年龄用 avoir；国籍形容词用 être，并进行性别配合。",
+          "knowledgeId": "k13",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-13-q2",
+          "type": "translation",
+          "prompt": "“我是中国女性。”写成法语。",
+          "answers": [
+            "je suis chinoise"
+          ],
+          "explanation": "年龄用 avoir；国籍形容词用 être，并进行性别配合。",
+          "knowledgeId": "k13",
+          "skill": "writing"
+        }
+      ],
+      "summary": "年龄用 avoir；国籍形容词用 être，并进行性别配合。"
+    },
+    {
+      "id": "day-14",
+      "day": 14,
+      "title": "第二周回顾：一段初次见面",
+      "goal": "整合主语、être、avoir 和冠词。",
+      "explanation": "A：Bonjour ! Tu es étudiant ? B：Oui, je suis étudiant. J’ai un livre. 先辨认主语，再选动词变位，最后检查名词和冠词的配合。不要因一次错误重学整周，优先复习错误知识点。",
+      "example": "Tu as un livre ? Oui, j’ai un livre.",
+      "translation": "你有一本书吗？有。",
+      "words": [
+        "w14-0",
+        "w14-1"
+      ],
+      "knowledgeId": "k14",
+      "prerequisite": "day-13",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-14-q1",
+          "type": "dialogue",
+          "prompt": "Tu as un livre ? 在问什么？",
+          "options": [
+            "你有一本书吗",
+            "你是学生吗",
+            "你叫什么"
+          ],
+          "answers": [
+            "你有一本书吗"
+          ],
+          "explanation": "nous 对应 être 的 sommes，不是 sont。",
+          "knowledgeId": "k14",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-14-q2",
+          "type": "conjugation",
+          "prompt": "补全：Nous ___ étudiants.",
+          "answers": [
+            "sommes"
+          ],
+          "explanation": "nous 对应 être 的 sommes，不是 sont。",
+          "knowledgeId": "k14",
+          "skill": "writing"
+        },
+        {
+          "id": "day-14-q3",
+          "type": "translation",
+          "prompt": "将“她是学生”译成法语。",
+          "answers": [
+            "elle est étudiante"
+          ],
+          "explanation": "elle 对应 est，学生用阴性 étudiante。",
+          "knowledgeId": "k14",
+          "skill": "writing"
+        }
+      ],
+      "summary": "nous 对应 être 的 sommes，不是 sont。"
+    },
+    {
+      "id": "day-15",
+      "day": 15,
+      "title": "规则 -er 动词",
+      "goal": "学习 parler 的现在时规则。",
+      "explanation": "去掉 -er 得词干 parl-，加 -e、-es、-e、-ons、-ez、-ent：je parle、tu parles、il parle、nous parlons、vous parlez、ils parlent。多种词尾不发音，书写仍须区分。aller 虽以 er 结尾，却不是规则第一组动词。",
+      "example": "Je parle français.",
+      "translation": "我说法语。",
+      "words": [
+        "w15-0",
+        "w15-1"
+      ],
+      "knowledgeId": "k15",
+      "prerequisite": "day-14",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-15-q1",
+          "type": "conjugation",
+          "prompt": "Nous ___ français.",
+          "options": [
+            "parlons",
+            "parlez",
+            "parle"
+          ],
+          "answers": [
+            "parlons"
+          ],
+          "explanation": "tu 的书写词尾是 -es，不能因不发音省略 s。",
+          "knowledgeId": "k15",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-15-q2",
+          "type": "fill",
+          "prompt": "补全：Tu ___ français.（parler）",
+          "answers": [
+            "parles"
+          ],
+          "explanation": "tu 的书写词尾是 -es，不能因不发音省略 s。",
+          "knowledgeId": "k15",
+          "skill": "writing"
+        },
+        {
+          "id": "day-15-q3",
+          "type": "conjugation",
+          "prompt": "补全：Ils ___ français.（parler）",
+          "answers": [
+            "parlent"
+          ],
+          "explanation": "ils 的词尾是 -ent，不能漏写。",
+          "knowledgeId": "k15",
+          "skill": "writing"
+        }
+      ],
+      "summary": "tu 的书写词尾是 -es，不能因不发音省略 s。"
+    },
+    {
+      "id": "day-16",
+      "day": 16,
+      "title": "日常动作",
+      "goal": "用常见动词描述一天。",
+      "explanation": "aimer（喜欢）、travailler（工作）、regarder（看）可按规则 -er 变位。Je travaille. Tu regardes un film. 动词后的对象常需冠词。此阶段先用简单的主语—动词—宾语结构。",
+      "example": "Je regarde un film.",
+      "translation": "我看一部电影。",
+      "words": [
+        "w16-0",
+        "w16-1"
+      ],
+      "knowledgeId": "k16",
+      "prerequisite": "day-15",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-16-q1",
+          "type": "choice",
+          "prompt": "“我工作”是哪一句？",
+          "options": [
+            "Je travaille.",
+            "Je travaillez.",
+            "Je travailler."
+          ],
+          "answers": [
+            "Je travaille."
+          ],
+          "explanation": "vous 对应 -ez。不要把不定式直接放在主语之后。",
+          "knowledgeId": "k16",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-16-q2",
+          "type": "conjugation",
+          "prompt": "补全：Vous ___ un film.（regarder）",
+          "answers": [
+            "regardez"
+          ],
+          "explanation": "vous 对应 -ez。不要把不定式直接放在主语之后。",
+          "knowledgeId": "k16",
+          "skill": "writing"
+        }
+      ],
+      "summary": "vous 对应 -ez。不要把不定式直接放在主语之后。"
+    },
+    {
+      "id": "day-17",
+      "day": 17,
+      "title": "否定句 ne…pas",
+      "goal": "用书面完整否定表达“不”。",
+      "explanation": "ne 放在变位动词前，pas 放在后：Je ne parle pas français. 元音前 ne 省音为 n’：Je n’aime pas… 日常口语常省 ne，但初学先掌握完整结构。否定拥有某物时不定冠词常变 de：Je n’ai pas de livre。",
+      "example": "Je ne suis pas étudiant.",
+      "translation": "我不是男学生。",
+      "words": [
+        "w17-0",
+        "w17-1"
+      ],
+      "knowledgeId": "k17",
+      "prerequisite": "day-16",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-17-q1",
+          "type": "choice",
+          "prompt": "Je ___ suis ___ étudiant.",
+          "options": [
+            "ne / pas",
+            "pas / ne",
+            "ne / ne"
+          ],
+          "answers": [
+            "ne / pas"
+          ],
+          "explanation": "ne 和 pas 夹住变位动词，不能都放在动词前。",
+          "knowledgeId": "k17",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-17-q2",
+          "type": "order",
+          "prompt": "排列：pas / je / parle / ne / français。",
+          "answers": [
+            "je ne parle pas français"
+          ],
+          "explanation": "ne 和 pas 夹住变位动词，不能都放在动词前。",
+          "knowledgeId": "k17",
+          "skill": "writing"
+        },
+        {
+          "id": "day-17-q3",
+          "type": "fill",
+          "prompt": "补全：Je ___ pas de livre.（avoir，含否定）",
+          "answers": [
+            "n’ai"
+          ],
+          "explanation": "ne 在 ai 前省音为 n’。",
+          "knowledgeId": "k17",
+          "skill": "writing"
+        }
+      ],
+      "summary": "ne 和 pas 夹住变位动词，不能都放在动词前。"
+    },
+    {
+      "id": "day-18",
+      "day": 18,
+      "title": "数字与年龄",
+      "goal": "说出 0–20，正确表达年龄。",
+      "explanation": "0 zéro，1 un，2 deux，3 trois，4 quatre，5 cinq，6 six，7 sept，8 huit，9 neuf，10 dix；11 onze，12 douze，13 treize，14 quatorze，15 quinze，16 seize，17 dix-sept，18 dix-huit，19 dix-neuf，20 vingt。年龄用 J’ai…ans。",
+      "example": "J’ai dix-huit ans.",
+      "translation": "我十八岁。",
+      "words": [
+        "w18-0",
+        "w18-1"
+      ],
+      "knowledgeId": "k18",
+      "prerequisite": "day-17",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-18-q1",
+          "type": "choice",
+          "prompt": "vingt 是多少？",
+          "options": [
+            "20",
+            "12",
+            "2"
+          ],
+          "answers": [
+            "20"
+          ],
+          "explanation": "J’ai 是 avoir，不是 être；ans 需要复数 s。",
+          "knowledgeId": "k18",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-18-q2",
+          "type": "translation",
+          "prompt": "把“我二十岁”写成法语。",
+          "answers": [
+            "j’ai vingt ans"
+          ],
+          "explanation": "J’ai 是 avoir，不是 être；ans 需要复数 s。",
+          "knowledgeId": "k18",
+          "skill": "writing"
+        }
+      ],
+      "summary": "J’ai 是 avoir，不是 être；ans 需要复数 s。"
+    },
+    {
+      "id": "day-19",
+      "day": 19,
+      "title": "时间与日期",
+      "goal": "认识整点、星期和日期表达。",
+      "explanation": "Il est deux heures（两点）；一点是 une heure。日期用 Nous sommes le… 或 On est le…；月首用 premier，其他日期用基数词。星期和月份一般小写：lundi、janvier。先掌握整点和一个日期模板。",
+      "example": "Il est deux heures. Nous sommes le deux janvier.",
+      "translation": "现在两点。今天是一月二日。",
+      "words": [
+        "w19-0",
+        "w19-1"
+      ],
+      "knowledgeId": "k19",
+      "prerequisite": "day-18",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-19-q1",
+          "type": "choice",
+          "prompt": "“现在两点”选哪句？",
+          "options": [
+            "Il est deux heures.",
+            "Il a deux heures."
+          ],
+          "answers": [
+            "Il est deux heures."
+          ],
+          "explanation": "一点用单数 heure；两点及以上通常用 heures。",
+          "knowledgeId": "k19",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-19-q2",
+          "type": "fill",
+          "prompt": "补全：Il est une ___.",
+          "answers": [
+            "heure"
+          ],
+          "explanation": "一点用单数 heure；两点及以上通常用 heures。",
+          "knowledgeId": "k19",
+          "skill": "writing"
+        }
+      ],
+      "summary": "一点用单数 heure；两点及以上通常用 heures。"
+    },
+    {
+      "id": "day-20",
+      "day": 20,
+      "title": "家庭与人物描述",
+      "goal": "介绍家庭成员并进行形容词配合。",
+      "explanation": "mon père（我的父亲）、ma mère（我的母亲）、mes parents（我的父母）。所有格限定词跟所拥有的名词配合，不由拥有者性别决定。形容词通常随名词性数变化：petit、petite、petits、petites。",
+      "example": "Ma mère est française.",
+      "translation": "我的母亲是法国人。",
+      "words": [
+        "w20-0",
+        "w20-1"
+      ],
+      "knowledgeId": "k20",
+      "prerequisite": "day-19",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-20-q1",
+          "type": "gender",
+          "prompt": "“我的母亲”怎么说？",
+          "options": [
+            "ma mère",
+            "mon mère",
+            "mes mère"
+          ],
+          "answers": [
+            "ma mère"
+          ],
+          "explanation": "mère 为阴性单数，用 ma；français 的阴性是 française。",
+          "knowledgeId": "k20",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-20-q2",
+          "type": "fill",
+          "prompt": "补全：Elle est ___.（français 的阴性）",
+          "answers": [
+            "française"
+          ],
+          "explanation": "mère 为阴性单数，用 ma；français 的阴性是 française。",
+          "knowledgeId": "k20",
+          "skill": "writing"
+        }
+      ],
+      "summary": "mère 为阴性单数，用 ma；français 的阴性是 française。"
+    },
+    {
+      "id": "day-21",
+      "day": 21,
+      "title": "第三周回顾：我的一天",
+      "goal": "检索动词、否定、年龄和家庭表达。",
+      "explanation": "Je travaille. Je ne regarde pas de film. Ma mère parle français. 变位取决于主语，形容词配合取决于被描述对象。把出错的地方定位到变位、否定或性数，而不是笼统认为自己不会法语。",
+      "example": "Nous parlons français.",
+      "translation": "我们说法语。",
+      "words": [
+        "w21-0",
+        "w21-1"
+      ],
+      "knowledgeId": "k21",
+      "prerequisite": "day-20",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-21-q1",
+          "type": "conjugation",
+          "prompt": "Nous 对应哪个 parler 变位？",
+          "options": [
+            "parlons",
+            "parlez",
+            "parlent"
+          ],
+          "answers": [
+            "parlons"
+          ],
+          "explanation": "père 为阳性，用 mon；père 的重音必须保留。",
+          "knowledgeId": "k21",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-21-q2",
+          "type": "translation",
+          "prompt": "写出“我的父亲”的法语。",
+          "answers": [
+            "mon père"
+          ],
+          "explanation": "père 为阳性，用 mon；père 的重音必须保留。",
+          "knowledgeId": "k21",
+          "skill": "writing"
+        },
+        {
+          "id": "day-21-q3",
+          "type": "translation",
+          "prompt": "将“我不说法语”译成法语。",
+          "answers": [
+            "je ne parle pas français"
+          ],
+          "explanation": "ne 和 pas 包住变位动词 parle。",
+          "knowledgeId": "k21",
+          "skill": "writing"
+        }
+      ],
+      "summary": "père 为阳性，用 mon；père 的重音必须保留。"
+    },
+    {
+      "id": "day-22",
+      "day": 22,
+      "title": "aller：我去哪里",
+      "goal": "掌握 aller 及 à 与冠词的缩合。",
+      "explanation": "aller：je vais、tu vas、il va、nous allons、vous allez、ils vont。表示去某处用 à；à + le → au，à + les → aux，à la 不缩合，元音前 à l’。",
+      "example": "Je vais au café.",
+      "translation": "我去咖啡馆。",
+      "words": [
+        "w22-0",
+        "w22-1"
+      ],
+      "knowledgeId": "k22",
+      "prerequisite": "day-21",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-22-q1",
+          "type": "conjugation",
+          "prompt": "Je ___ au café.",
+          "options": [
+            "vais",
+            "vas",
+            "va"
+          ],
+          "answers": [
+            "vais"
+          ],
+          "explanation": "aller 是不规则动词；不能用 je alle。à le 必须缩合为 au。",
+          "knowledgeId": "k22",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-22-q2",
+          "type": "fill",
+          "prompt": "补全：à + le = ___。",
+          "answers": [
+            "au"
+          ],
+          "explanation": "aller 是不规则动词；不能用 je alle。à le 必须缩合为 au。",
+          "knowledgeId": "k22",
+          "skill": "writing"
+        }
+      ],
+      "summary": "aller 是不规则动词；不能用 je alle。à le 必须缩合为 au。"
+    },
+    {
+      "id": "day-23",
+      "day": 23,
+      "title": "地点与方位",
+      "goal": "用 sur、sous、dans、devant 描述位置。",
+      "explanation": "sur（在上面）、sous（在下面）、dans（在里面）、devant（在前面）。用 être 说明位置：Le livre est sur la table. 法语需要动词，不能像中文那样直接说“书在桌上”而省略它。",
+      "example": "Le livre est sur la table.",
+      "translation": "书在桌子上。",
+      "words": [
+        "w23-0",
+        "w23-1"
+      ],
+      "knowledgeId": "k23",
+      "prerequisite": "day-22",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-23-q1",
+          "type": "choice",
+          "prompt": "“在下面”对应哪个词？",
+          "options": [
+            "sous",
+            "sur",
+            "dans"
+          ],
+          "answers": [
+            "sous"
+          ],
+          "explanation": "说明位置也需要变位动词 est。sur /syʁ/ 与 sous /su/ 不同。",
+          "knowledgeId": "k23",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-23-q2",
+          "type": "fill",
+          "prompt": "补全：Le livre ___ sur la table.",
+          "answers": [
+            "est"
+          ],
+          "explanation": "说明位置也需要变位动词 est。sur /syʁ/ 与 sous /su/ 不同。",
+          "knowledgeId": "k23",
+          "skill": "writing"
+        }
+      ],
+      "summary": "说明位置也需要变位动词 est。sur /syʁ/ 与 sous /su/ 不同。"
+    },
+    {
+      "id": "day-24",
+      "day": 24,
+      "title": "购物：多少钱",
+      "goal": "用礼貌表达询价。",
+      "explanation": "C’est combien ? 表示“多少钱？”Je voudrais… 是礼貌请求“我想要……”，本阶段作为固定表达学习，条件式系统放在后续。un euro / deux euros。服务场景用 vous 和 s’il vous plaît。",
+      "example": "Je voudrais un livre, s’il vous plaît.",
+      "translation": "我想要一本书，谢谢。",
+      "words": [
+        "w24-0",
+        "w24-1"
+      ],
+      "knowledgeId": "k24",
+      "prerequisite": "day-23",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-24-q1",
+          "type": "dialogue",
+          "prompt": "C’est combien ? 在询问什么？",
+          "options": [
+            "价格",
+            "地点",
+            "姓名"
+          ],
+          "answers": [
+            "价格"
+          ],
+          "explanation": "voudrais 表达礼貌请求，初学先整体掌握 Je voudrais。",
+          "knowledgeId": "k24",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-24-q2",
+          "type": "fill",
+          "prompt": "补全：Je ___ un livre, s’il vous plaît.",
+          "answers": [
+            "voudrais"
+          ],
+          "explanation": "voudrais 表达礼貌请求，初学先整体掌握 Je voudrais。",
+          "knowledgeId": "k24",
+          "skill": "writing"
+        }
+      ],
+      "summary": "voudrais 表达礼貌请求，初学先整体掌握 Je voudrais。"
+    },
+    {
+      "id": "day-25",
+      "day": 25,
+      "title": "餐厅：点一杯咖啡",
+      "goal": "礼貌点餐并理解服务员问话。",
+      "explanation": "Un café, s’il vous plaît. 是简短自然的点单方式。Je voudrais de l’eau. 水作为不可数物质，这里用部分冠词 de l’。L’addition, s’il vous plaît. 用于结账，不等于点餐。",
+      "example": "Un café, s’il vous plaît. L’addition, s’il vous plaît.",
+      "translation": "请来一杯咖啡。请结账。",
+      "words": [
+        "w25-0",
+        "w25-1"
+      ],
+      "knowledgeId": "k25",
+      "prerequisite": "day-24",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-25-q1",
+          "type": "dialogue",
+          "prompt": "服务员听到 L’addition, s’il vous plaît. 应做什么？",
+          "options": [
+            "拿账单",
+            "倒水",
+            "拿菜单"
+          ],
+          "answers": [
+            "拿账单"
+          ],
+          "explanation": "café 的 é 不能省略；s’il vous plaît 是礼貌表达。",
+          "knowledgeId": "k25",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-25-q2",
+          "type": "translation",
+          "prompt": "写出“请来一杯咖啡”的法语（用简短点单句）。",
+          "answers": [
+            "un café, s’il vous plaît",
+            "un café s’il vous plaît",
+            "je voudrais un café, s’il vous plaît"
+          ],
+          "explanation": "café 的 é 不能省略；s’il vous plaît 是礼貌表达。",
+          "knowledgeId": "k25",
+          "skill": "writing"
+        }
+      ],
+      "summary": "café 的 é 不能省略；s’il vous plaît 是礼貌表达。"
+    },
+    {
+      "id": "day-26",
+      "day": 26,
+      "title": "表达喜好与 faire",
+      "goal": "表达喜欢，认识 faire 常用变位。",
+      "explanation": "泛指喜好常用定冠词：J’aime le café. 喜欢做某事可接动词原形：J’aime parler français. faire：je fais、tu fais、il fait、nous faisons、vous faites、ils font。Je fais du sport 表示我做运动。",
+      "example": "J’aime le thé. Je fais du sport.",
+      "translation": "我喜欢茶。我做运动。",
+      "words": [
+        "w26-0",
+        "w26-1"
+      ],
+      "knowledgeId": "k26",
+      "prerequisite": "day-25",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-26-q1",
+          "type": "conjugation",
+          "prompt": "Vous ___ du sport.",
+          "options": [
+            "faites",
+            "faisez",
+            "font"
+          ],
+          "answers": [
+            "faites"
+          ],
+          "explanation": "faire 不规则：vous faites。泛指喜欢咖啡使用 le café。",
+          "knowledgeId": "k26",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-26-q2",
+          "type": "order",
+          "prompt": "排列：le / aime / j’ / café。",
+          "answers": [
+            "j’aime le café"
+          ],
+          "explanation": "faire 不规则：vous faites。泛指喜欢咖啡使用 le café。",
+          "knowledgeId": "k26",
+          "skill": "writing"
+        }
+      ],
+      "summary": "faire 不规则：vous faites。泛指喜欢咖啡使用 le café。"
+    },
+    {
+      "id": "day-27",
+      "day": 27,
+      "title": "综合对话：咖啡馆见面",
+      "goal": "完成问候、介绍与点餐交流。",
+      "explanation": "A：Bonjour ! B：Bonjour ! Je m’appelle Lin. A：Vous voulez un café ? B：Oui, un café, s’il vous plaît. voulez 来自 vouloir（想要），此处只做理解。先用熟悉的短句回应，不必急着使用长句。",
+      "example": "Vous voulez un café ? Oui, merci.",
+      "translation": "您想要一杯咖啡吗？是的，谢谢。",
+      "words": [
+        "w27-0",
+        "w27-1"
+      ],
+      "knowledgeId": "k27",
+      "prerequisite": "day-26",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-27-q1",
+          "type": "dialogue",
+          "prompt": "Vous voulez un café ? 的合适回应？",
+          "options": [
+            "Oui, merci.",
+            "Je m’appelle Lin."
+          ],
+          "answers": [
+            "Oui, merci."
+          ],
+          "explanation": "针对咖啡提问可答 Oui, merci；自报姓名并未回答当前问题。",
+          "knowledgeId": "k27",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-27-q2",
+          "type": "translation",
+          "prompt": "写出“我叫 Lin”的法语。",
+          "answers": [
+            "je m’appelle lin"
+          ],
+          "explanation": "针对咖啡提问可答 Oui, merci；自报姓名并未回答当前问题。",
+          "knowledgeId": "k27",
+          "skill": "writing"
+        }
+      ],
+      "summary": "针对咖啡提问可答 Oui, merci；自报姓名并未回答当前问题。"
+    },
+    {
+      "id": "day-28",
+      "day": 28,
+      "title": "阶段测验：我的下一步",
+      "goal": "综合检索基础结构并制定复习计划。",
+      "explanation": "四周入门不代表已达到完整 A1。先检查 être/avoir、冠词、变位、否定和基础交流。根据记录里错误最多的知识点做针对性复习。A2、B1、B2 尚未开放；下一阶段应继续扩充 A1 听说读写。",
+      "example": "Je suis étudiante. J’ai vingt ans. Je parle français.",
+      "translation": "我是女学生。我二十岁。我说法语。",
+      "words": [
+        "w28-0",
+        "w28-1"
+      ],
+      "knowledgeId": "k28",
+      "prerequisite": "day-27",
+      "level": "A1 起步",
+      "exercises": [
+        {
+          "id": "day-28-q1",
+          "type": "choice",
+          "prompt": "一位女性说“我是学生”，正确的是？",
+          "options": [
+            "Je suis étudiante.",
+            "Je suis une étudiant."
+          ],
+          "answers": [
+            "Je suis étudiante."
+          ],
+          "explanation": "女性学生用 étudiante；ils 的 -er 动词词尾为 -ent，虽不发音仍必须写出。",
+          "knowledgeId": "k28",
+          "skill": "reading",
+          "audio": null
+        },
+        {
+          "id": "day-28-q2",
+          "type": "conjugation",
+          "prompt": "补全：Ils ___ français.（parler）",
+          "answers": [
+            "parlent"
+          ],
+          "explanation": "女性学生用 étudiante；ils 的 -er 动词词尾为 -ent，虽不发音仍必须写出。",
+          "knowledgeId": "k28",
+          "skill": "writing"
+        },
+        {
+          "id": "day-28-q3",
+          "type": "conjugation",
+          "prompt": "补全：Nous ___ au café.（aller）",
+          "answers": [
+            "allons"
+          ],
+          "explanation": "nous 对应 allons，不是 vais。",
+          "knowledgeId": "k28",
+          "skill": "writing"
+        },
+        {
+          "id": "day-28-q4",
+          "type": "translation",
+          "prompt": "写出“我的母亲”的法语。",
+          "answers": [
+            "ma mère"
+          ],
+          "explanation": "所有格限定词跟 mère 的阴性单数配合。",
+          "knowledgeId": "k28",
+          "skill": "writing"
+        },
+        {
+          "id": "day-28-q5",
+          "type": "translation",
+          "prompt": "把“我有一本书”写成法语。",
+          "answers": [
+            "j’ai un livre"
+          ],
+          "explanation": "je 在 ai 前省音；livre 为阳性，用 un。",
+          "knowledgeId": "k28",
+          "skill": "writing"
+        },
+        {
+          "id": "day-28-q6",
+          "type": "translation",
+          "prompt": "写出“我不说法语”的法语。",
+          "answers": [
+            "je ne parle pas français"
+          ],
+          "explanation": "完整否定结构为 ne + 变位动词 + pas。",
+          "knowledgeId": "k28",
+          "skill": "writing"
+        }
+      ],
+      "summary": "女性学生用 étudiante；ils 的 -er 动词词尾为 -ent，虽不发音仍必须写出。"
+    }
+  ],
+  "words": [
+    {
+      "id": "w1-0",
+      "term": "bonjour",
+      "meaning": "你好",
+      "pos": "感叹词",
+      "ipa": "bɔ̃.ʒuʁ",
+      "plural": null,
+      "example": "Bonjour, Lin !",
+      "translation": "你好，Lin！",
+      "lessonId": "day-1"
+    },
+    {
+      "id": "w1-1",
+      "term": "salut",
+      "meaning": "嗨、再见（熟人）",
+      "pos": "感叹词",
+      "ipa": "sa.ly",
+      "plural": null,
+      "example": "Salut, Lin !",
+      "translation": "嗨，Lin！",
+      "lessonId": "day-1"
+    },
+    {
+      "id": "w1-2",
+      "term": "merci",
+      "meaning": "谢谢",
+      "pos": "感叹词",
+      "ipa": "mɛʁ.si",
+      "plural": null,
+      "example": "Merci, Lin !",
+      "translation": "谢谢，Lin！",
+      "lessonId": "day-1"
+    },
+    {
+      "id": "w2-0",
+      "term": "tu",
+      "meaning": "你",
+      "pos": "主语代词",
+      "ipa": "ty",
+      "plural": null,
+      "example": "Tu es étudiant.",
+      "translation": "你是男学生。",
+      "lessonId": "day-2"
+    },
+    {
+      "id": "w2-1",
+      "term": "tout",
+      "meaning": "全部",
+      "pos": "不定代词",
+      "ipa": "tu",
+      "plural": null,
+      "example": "Tout est ici.",
+      "translation": "所有东西都在这里。",
+      "lessonId": "day-2"
+    },
+    {
+      "id": "w3-0",
+      "term": "bon",
+      "meaning": "好的（阳性）",
+      "pos": "形容词",
+      "ipa": "bɔ̃",
+      "plural": null,
+      "example": "Le pain est bon.",
+      "translation": "面包很好吃。",
+      "lessonId": "day-3"
+    },
+    {
+      "id": "w3-1",
+      "term": "pain",
+      "meaning": "面包",
+      "pos": "阳性名词",
+      "ipa": "pɛ̃",
+      "plural": "pains",
+      "example": "J’ai du pain.",
+      "translation": "我有面包。",
+      "lessonId": "day-3"
+    },
+    {
+      "id": "w4-0",
+      "term": "eau",
+      "meaning": "水",
+      "pos": "阴性名词",
+      "ipa": "o",
+      "plural": "eaux",
+      "example": "Je voudrais de l’eau.",
+      "translation": "我想要一些水。",
+      "lessonId": "day-4"
+    },
+    {
+      "id": "w4-1",
+      "term": "chat",
+      "meaning": "猫",
+      "pos": "阳性名词",
+      "ipa": "ʃa",
+      "plural": "chats",
+      "example": "Le chat est ici.",
+      "translation": "猫在这里。",
+      "lessonId": "day-4"
+    },
+    {
+      "id": "w5-0",
+      "term": "bonsoir",
+      "meaning": "晚上好",
+      "pos": "感叹词",
+      "ipa": "bɔ̃.swaʁ",
+      "plural": null,
+      "example": "Bonsoir, Lin !",
+      "translation": "晚上好，Lin！",
+      "lessonId": "day-5"
+    },
+    {
+      "id": "w5-1",
+      "term": "au revoir",
+      "meaning": "再见",
+      "pos": "固定表达",
+      "ipa": "o.ʁə.vwaʁ",
+      "plural": null,
+      "example": "Au revoir, Lin !",
+      "translation": "再见，Lin！",
+      "lessonId": "day-5"
+    },
+    {
+      "id": "w6-0",
+      "term": "je",
+      "meaning": "我",
+      "pos": "主语代词",
+      "ipa": "ʒə",
+      "plural": null,
+      "example": "Je suis étudiant.",
+      "translation": "我是男学生。",
+      "lessonId": "day-6"
+    },
+    {
+      "id": "w6-1",
+      "term": "elle",
+      "meaning": "她",
+      "pos": "主语代词",
+      "ipa": "ɛl",
+      "plural": null,
+      "example": "Elle est étudiante.",
+      "translation": "她是女学生。",
+      "lessonId": "day-6"
+    },
+    {
+      "id": "w7-0",
+      "term": "oui",
+      "meaning": "是、对",
+      "pos": "副词",
+      "ipa": "wi",
+      "plural": null,
+      "example": "Oui, merci.",
+      "translation": "是的，谢谢。",
+      "lessonId": "day-7"
+    },
+    {
+      "id": "w7-1",
+      "term": "non",
+      "meaning": "不、不是",
+      "pos": "副词",
+      "ipa": "nɔ̃",
+      "plural": null,
+      "example": "Non, merci.",
+      "translation": "不用了，谢谢。",
+      "lessonId": "day-7"
+    },
+    {
+      "id": "w8-0",
+      "term": "étudiant",
+      "meaning": "男学生",
+      "pos": "阳性名词",
+      "ipa": "e.ty.djɑ̃",
+      "plural": "étudiants",
+      "example": "Je suis étudiant.",
+      "translation": "我是男学生。",
+      "lessonId": "day-8"
+    },
+    {
+      "id": "w8-1",
+      "term": "étudiante",
+      "meaning": "女学生",
+      "pos": "阴性名词",
+      "ipa": "e.ty.djɑ̃t",
+      "plural": "étudiantes",
+      "example": "Je suis étudiante.",
+      "translation": "我是女学生。",
+      "lessonId": "day-8"
+    },
+    {
+      "id": "w9-0",
+      "term": "livre",
+      "meaning": "书",
+      "pos": "阳性名词",
+      "ipa": "livʁ",
+      "plural": "livres",
+      "example": "J’ai un livre.",
+      "translation": "我有一本书。",
+      "lessonId": "day-9"
+    },
+    {
+      "id": "w9-1",
+      "term": "ans",
+      "meaning": "岁、年（复数）",
+      "pos": "阳性名词复数",
+      "ipa": "ɑ̃",
+      "plural": null,
+      "example": "J’ai vingt ans.",
+      "translation": "我二十岁。",
+      "lessonId": "day-9"
+    },
+    {
+      "id": "w10-0",
+      "term": "table",
+      "meaning": "桌子",
+      "pos": "阴性名词",
+      "ipa": "tabl",
+      "plural": "tables",
+      "example": "Le livre est sur la table.",
+      "translation": "书在桌子上。",
+      "lessonId": "day-10"
+    },
+    {
+      "id": "w10-1",
+      "term": "stylo",
+      "meaning": "笔",
+      "pos": "阳性名词",
+      "ipa": "sti.lo",
+      "plural": "stylos",
+      "example": "J’ai un stylo.",
+      "translation": "我有一支笔。",
+      "lessonId": "day-10"
+    },
+    {
+      "id": "w11-0",
+      "term": "les",
+      "meaning": "这些、那些（定冠词复数）",
+      "pos": "冠词",
+      "ipa": "le",
+      "plural": null,
+      "example": "Les livres sont ici.",
+      "translation": "这些书在这里。",
+      "lessonId": "day-11"
+    },
+    {
+      "id": "w11-1",
+      "term": "des",
+      "meaning": "一些（不定冠词复数）",
+      "pos": "冠词",
+      "ipa": "de",
+      "plural": null,
+      "example": "J’ai des livres.",
+      "translation": "我有一些书。",
+      "lessonId": "day-11"
+    },
+    {
+      "id": "w12-0",
+      "term": "où",
+      "meaning": "哪里",
+      "pos": "疑问副词",
+      "ipa": "u",
+      "plural": null,
+      "example": "Où est le livre ?",
+      "translation": "书在哪里？",
+      "lessonId": "day-12"
+    },
+    {
+      "id": "w12-1",
+      "term": "qui",
+      "meaning": "谁",
+      "pos": "疑问代词",
+      "ipa": "ki",
+      "plural": null,
+      "example": "Qui est là ?",
+      "translation": "谁在那里？",
+      "lessonId": "day-12"
+    },
+    {
+      "id": "w13-0",
+      "term": "chinois",
+      "meaning": "中国的、中国男性",
+      "pos": "形容词/名词",
+      "ipa": "ʃi.nwa",
+      "plural": null,
+      "example": "Il est chinois.",
+      "translation": "他是中国人。",
+      "lessonId": "day-13"
+    },
+    {
+      "id": "w13-1",
+      "term": "chinoise",
+      "meaning": "中国的、中国女性",
+      "pos": "形容词/名词",
+      "ipa": "ʃi.nwaz",
+      "plural": null,
+      "example": "Elle est chinoise.",
+      "translation": "她是中国人。",
+      "lessonId": "day-13"
+    },
+    {
+      "id": "w14-0",
+      "term": "vous",
+      "meaning": "您、你们",
+      "pos": "主语代词",
+      "ipa": "vu",
+      "plural": null,
+      "example": "Vous êtes étudiant ?",
+      "translation": "您是男学生吗？",
+      "lessonId": "day-14"
+    },
+    {
+      "id": "w14-1",
+      "term": "nous",
+      "meaning": "我们",
+      "pos": "主语代词",
+      "ipa": "nu",
+      "plural": null,
+      "example": "Nous sommes étudiants.",
+      "translation": "我们是学生。",
+      "lessonId": "day-14"
+    },
+    {
+      "id": "w15-0",
+      "term": "parler",
+      "meaning": "说、说话",
+      "pos": "动词",
+      "ipa": "paʁ.le",
+      "plural": null,
+      "example": "J’aime parler français.",
+      "translation": "我喜欢说法语。",
+      "lessonId": "day-15"
+    },
+    {
+      "id": "w15-1",
+      "term": "français",
+      "meaning": "法语",
+      "pos": "阳性名词",
+      "ipa": "fʁɑ̃.sɛ",
+      "plural": null,
+      "example": "Je parle français.",
+      "translation": "我说法语。",
+      "lessonId": "day-15"
+    },
+    {
+      "id": "w16-0",
+      "term": "travailler",
+      "meaning": "工作",
+      "pos": "动词",
+      "ipa": "tʁa.va.je",
+      "plural": null,
+      "example": "J’aime travailler.",
+      "translation": "我喜欢工作。",
+      "lessonId": "day-16"
+    },
+    {
+      "id": "w16-1",
+      "term": "film",
+      "meaning": "电影",
+      "pos": "阳性名词",
+      "ipa": "film",
+      "plural": "films",
+      "example": "Je regarde un film.",
+      "translation": "我看一部电影。",
+      "lessonId": "day-16"
+    },
+    {
+      "id": "w17-0",
+      "term": "pas",
+      "meaning": "不（否定结构的一部分）",
+      "pos": "副词",
+      "ipa": "pa",
+      "plural": null,
+      "example": "Je ne parle pas français.",
+      "translation": "我不说法语。",
+      "lessonId": "day-17"
+    },
+    {
+      "id": "w17-1",
+      "term": "aimer",
+      "meaning": "喜欢、爱",
+      "pos": "动词",
+      "ipa": "e.me",
+      "plural": null,
+      "example": "Aimer, c’est important.",
+      "translation": "爱是重要的。",
+      "lessonId": "day-17"
+    },
+    {
+      "id": "w18-0",
+      "term": "deux",
+      "meaning": "二",
+      "pos": "数词",
+      "ipa": "dø",
+      "plural": null,
+      "example": "J’ai deux livres.",
+      "translation": "我有两本书。",
+      "lessonId": "day-18"
+    },
+    {
+      "id": "w18-1",
+      "term": "vingt",
+      "meaning": "二十",
+      "pos": "数词",
+      "ipa": "vɛ̃",
+      "plural": null,
+      "example": "J’ai vingt ans.",
+      "translation": "我二十岁。",
+      "lessonId": "day-18"
+    },
+    {
+      "id": "w19-0",
+      "term": "heure",
+      "meaning": "小时、点钟",
+      "pos": "阴性名词",
+      "ipa": "œʁ",
+      "plural": "heures",
+      "example": "Il est une heure.",
+      "translation": "现在一点。",
+      "lessonId": "day-19"
+    },
+    {
+      "id": "w19-1",
+      "term": "lundi",
+      "meaning": "星期一",
+      "pos": "阳性名词",
+      "ipa": "lœ̃.di",
+      "plural": "lundis",
+      "example": "Nous sommes lundi.",
+      "translation": "今天是星期一。",
+      "lessonId": "day-19"
+    },
+    {
+      "id": "w20-0",
+      "term": "père",
+      "meaning": "父亲",
+      "pos": "阳性名词",
+      "ipa": "pɛʁ",
+      "plural": "pères",
+      "example": "Mon père parle français.",
+      "translation": "我的父亲说法语。",
+      "lessonId": "day-20"
+    },
+    {
+      "id": "w20-1",
+      "term": "mère",
+      "meaning": "母亲",
+      "pos": "阴性名词",
+      "ipa": "mɛʁ",
+      "plural": "mères",
+      "example": "Ma mère parle français.",
+      "translation": "我的母亲说法语。",
+      "lessonId": "day-20"
+    },
+    {
+      "id": "w21-0",
+      "term": "parents",
+      "meaning": "父母",
+      "pos": "阳性名词复数",
+      "ipa": "pa.ʁɑ̃",
+      "plural": null,
+      "example": "Mes parents sont ici.",
+      "translation": "我的父母在这里。",
+      "lessonId": "day-21"
+    },
+    {
+      "id": "w21-1",
+      "term": "petit",
+      "meaning": "小的（阳性）",
+      "pos": "形容词",
+      "ipa": "pə.ti",
+      "plural": null,
+      "example": "Le livre est petit.",
+      "translation": "这本书很小。",
+      "lessonId": "day-21"
+    },
+    {
+      "id": "w22-0",
+      "term": "aller",
+      "meaning": "去",
+      "pos": "动词",
+      "ipa": "a.le",
+      "plural": null,
+      "example": "Je voudrais aller au café.",
+      "translation": "我想去咖啡馆。",
+      "lessonId": "day-22"
+    },
+    {
+      "id": "w22-1",
+      "term": "café",
+      "meaning": "咖啡、咖啡馆",
+      "pos": "阳性名词",
+      "ipa": "ka.fe",
+      "plural": "cafés",
+      "example": "Un café, s’il vous plaît.",
+      "translation": "请来一杯咖啡。",
+      "lessonId": "day-22"
+    },
+    {
+      "id": "w23-0",
+      "term": "sur",
+      "meaning": "在……上面",
+      "pos": "介词",
+      "ipa": "syʁ",
+      "plural": null,
+      "example": "Le livre est sur la table.",
+      "translation": "书在桌子上。",
+      "lessonId": "day-23"
+    },
+    {
+      "id": "w23-1",
+      "term": "sous",
+      "meaning": "在……下面",
+      "pos": "介词",
+      "ipa": "su",
+      "plural": null,
+      "example": "Le chat est sous la table.",
+      "translation": "猫在桌子下面。",
+      "lessonId": "day-23"
+    },
+    {
+      "id": "w24-0",
+      "term": "combien",
+      "meaning": "多少",
+      "pos": "疑问副词",
+      "ipa": "kɔ̃.bjɛ̃",
+      "plural": null,
+      "example": "C’est combien ?",
+      "translation": "多少钱？",
+      "lessonId": "day-24"
+    },
+    {
+      "id": "w24-1",
+      "term": "euro",
+      "meaning": "欧元",
+      "pos": "阳性名词",
+      "ipa": "ø.ʁo",
+      "plural": "euros",
+      "example": "Un euro, s’il vous plaît.",
+      "translation": "请付一欧元。",
+      "lessonId": "day-24"
+    },
+    {
+      "id": "w25-0",
+      "term": "addition",
+      "meaning": "账单",
+      "pos": "阴性名词",
+      "ipa": "a.di.sjɔ̃",
+      "plural": "additions",
+      "example": "L’addition, s’il vous plaît.",
+      "translation": "请结账。",
+      "lessonId": "day-25"
+    },
+    {
+      "id": "w25-1",
+      "term": "thé",
+      "meaning": "茶",
+      "pos": "阳性名词",
+      "ipa": "te",
+      "plural": "thés",
+      "example": "J’aime le thé.",
+      "translation": "我喜欢茶。",
+      "lessonId": "day-25"
+    },
+    {
+      "id": "w26-0",
+      "term": "faire",
+      "meaning": "做",
+      "pos": "动词",
+      "ipa": "fɛʁ",
+      "plural": null,
+      "example": "J’aime faire du sport.",
+      "translation": "我喜欢做运动。",
+      "lessonId": "day-26"
+    },
+    {
+      "id": "w26-1",
+      "term": "sport",
+      "meaning": "运动",
+      "pos": "阳性名词",
+      "ipa": "spɔʁ",
+      "plural": "sports",
+      "example": "Je fais du sport.",
+      "translation": "我做运动。",
+      "lessonId": "day-26"
+    },
+    {
+      "id": "w27-0",
+      "term": "s’il vous plaît",
+      "meaning": "请",
+      "pos": "固定表达",
+      "ipa": "sil.vu.plɛ",
+      "plural": null,
+      "example": "Un café, s’il vous plaît.",
+      "translation": "请来一杯咖啡。",
+      "lessonId": "day-27"
+    },
+    {
+      "id": "w27-1",
+      "term": "ami",
+      "meaning": "男性朋友",
+      "pos": "阳性名词",
+      "ipa": "a.mi",
+      "plural": "amis",
+      "example": "Il est mon ami.",
+      "translation": "他是我的朋友。",
+      "lessonId": "day-27"
+    },
+    {
+      "id": "w28-0",
+      "term": "apprendre",
+      "meaning": "学习",
+      "pos": "动词",
+      "ipa": "a.pʁɑ̃dʁ",
+      "plural": null,
+      "example": "J’aime apprendre.",
+      "translation": "我喜欢学习。",
+      "lessonId": "day-28"
+    },
+    {
+      "id": "w28-1",
+      "term": "française",
+      "meaning": "法国的（阴性）",
+      "pos": "形容词",
+      "ipa": "fʁɑ̃.sɛz",
+      "plural": null,
+      "example": "Elle est française.",
+      "translation": "她是法国人。",
+      "lessonId": "day-28"
+    }
+  ]
+}

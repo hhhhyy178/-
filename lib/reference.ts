@@ -1,0 +1,37 @@
+export const phonetics=[
+ ['i / y / u','i · u · ou','/i/ 展唇、前高舌位；/y/ 保持前高舌位并圆唇；/u/ 圆唇但舌位靠后。先发 /i/ 再圆唇，不要用中文谐音。','si · tu · tout','tu','tout'],
+ ['a','a','口张开，舌位低。现代法国法语中 /a/ 和历史的 /ɑ/ 在许多人语音中已合流。','ami','patte','pâte'],
+ ['e / ɛ','é · è · ê · ai · ei','/e/ 开口较小，/ɛ/ 开口更大。词尾和音节环境影响读音，不能只看字母。','été · mère','pré','prêt'],
+ ['ə / ø / œ','e · eu · œu','都涉及圆唇。/ø/ 较闭，/œ/ 较开；e caduc /ə/ 可保留或脱落，受语速、语体与辅音组合影响。','je · deux · sœur','peu','peur'],
+ ['o / ɔ','o · au · eau','/o/ 较闭、圆唇；/ɔ/ 较开。au/eau 常读 /o/，o 的读音取决于词与环境。','eau · porte','paume','pomme'],
+ ['ɑ̃ / ɛ̃ / ɔ̃','an · en · in · ain · on','气流同时经过口鼻，不添加独立 n。许多法国人将 /œ̃/ 合并入 /ɛ̃/；南部等地区可能保留区别。','sans · pain · bon','sans','son'],
+ ['ʁ','r · rr','舌尖放松，舌后部接近小舌区域形成摩擦。可从轻柔呼气开始，不要用力清嗓。实际发音有清浊和地区差异。','rue · merci','rue','roue'],
+ ['ʒ / ʃ','j · g(e/i) · ch','两者均为后齿龈擦音。/ʒ/ 声带振动，/ʃ/ 不振动。可用手触喉感受。','je · chat','joue','chou'],
+ ['v / f','v · f · ph','上齿轻触下唇，持续送气。/v/ 振动声带，/f/ 不振动。','vous · faire','vin','fin'],
+ ['z / s','z · s · ss · ç','/z/ 有声，/s/ 无声。两元音间单写 s 常为 /z/；ss 常为 /s/。ç 使 c 在 a/o/u 前读 /s/。','rose · poisson','poison','poisson'],
+ ['ɲ','gn','舌面前部接近硬腭，气流经鼻腔。不要逐个念 g 和 n。部分说话者的实现接近 /nj/。','montagne','montagne','ligne'],
+ ['j / ɥ / w','ill · ui · oi/ou','半元音快速滑向后续元音。/j/ 前舌展唇，/ɥ/ 前舌圆唇，/w/ 后舌圆唇；oi 常为 /wa/。','fille · huit · oui','huit','oui'],
+ ['联诵与连读','les amis · avec elle','联诵：通常不读的词末辅音在特定环境出现，如 les amis /le.z‿a.mi/。连读：本来就发音的辅音连到后词元音，如 avec elle。et 后不联诵。','les amis · avec elle','les amis','les livres'],
+ ['节奏、重音与符号','é · è · ê · ë · ç','法语重音通常落在节奏组最后一个非哑音节，不是英语式逐词重读。ë 提醒分开读相邻元音，如 Noël；ê 不保证所有地区都保留历史音长差异。问句常升调，但并非一律如此。','Noël · français','bonjour','bonsoir']
+].map(([ipa,letters,explanation,examples,left,right],i)=>({id:`p${i}`,ipa,letters,explanation,examples,left,right}));
+export const grammar=[
+ ['主语代词','je/tu/il/elle/nous/vous/ils/elles 分别对应我、你、他、她、我们、您或你们、他们、她们。法语通常不能省主语。','Je parle français.','不能把 Je parle 写成单独 parle 来陈述“我说”。',6],
+ ['名词阴阳性','名词具有语法性别，与物品的现实属性没有必然关系。把冠词和名词一起记。','un livre · une table','不要仅凭词尾 e 判断阴性。',10],
+ ['不定冠词','un 阳性单数、une 阴性单数、des 复数，介绍非特指对象。','J’ai un livre.','une livre 不是“一本书”；书为阳性。',11],
+ ['定冠词','le、la、les 表示特指或泛指类别；元音或哑音 h 前单数省音为 l’。','J’aime le café.','不要说 le ami；应为 l’ami。',11],
+ ['单复数','常见名词复数加 s，通常不读出；eau → eaux 等需单独学习。冠词同样变化。','un livre → des livres','不能只改冠词却省略书面的复数词尾。',11],
+ ['être','je suis · tu es · il/elle est · nous sommes · vous êtes · ils/elles sont。表示身份、状态、位置。','Elle est étudiante.','不是 elle es。职业身份常不带冠词。',8],
+ ['avoir','j’ai · tu as · il/elle a · nous avons · vous avez · ils/elles ont。表示拥有，也用于年龄。','J’ai vingt ans.','不是 Je suis vingt ans。',9],
+ ['aller','je vais · tu vas · il va · nous allons · vous allez · ils vont。去某处常接 à。','Je vais au café.','不是 je alle。',22],
+ ['faire','je fais · tu fais · il fait · nous faisons · vous faites · ils font。','Vous faites du sport.','不是 vous faisez。',26],
+ ['第一组 -er 动词','词干后加 e/es/e/ons/ez/ent。aller 例外；某些动词有拼写调整。','Nous parlons français.','Tu parles 的 s 虽不发音仍要写。',15],
+ ['否定句','ne/n’ 和 pas 包住变位动词。口语常省 ne，书面初学保留。','Je ne parle pas français.','不是 je ne pas parle。',17],
+ ['疑问句','升调可保持陈述语序；est-ce que 是另一常见框架。qui 问人，où 问地点。','Est-ce que tu es étudiant ?','où（哪里）与 ou（或者）不同。',12],
+ ['形容词性数配合','形容词通常跟所描述的名词性数一致，常加 e/s，但有不规则形式。','Elle est française.','français → française，而非简单忽略性别。',20],
+ ['基本介词','à 表去向或位置，dans 在里面，sur 在上，sous 在下。à+le=au，à+les=aux。','Le livre est sur la table.','à la 不缩合。',23],
+ ['数字','掌握 0–20 后再扩展。17/18/19 为 dix-sept/dix-huit/dix-neuf。','J’ai dix-huit ans.','年龄用 avoir 而非 être。',18],
+ ['日期','日期常用 le + 数字 + 月份。每月第一天用 premier。月份和星期一般小写。','Nous sommes le deux janvier.','不要把每月二日也写成第二的序数词。',19],
+ ['时间','Il est + 小时 + heure(s)。一点用 une heure，其他整点通常 heures。','Il est deux heures.','不是 Il a deux heures（时间表达）。',19],
+ ['所有格限定词','mon/ma/mes，ton/ta/tes，son/sa/ses 跟被拥有名词配合；元音前阴性单数用 mon 等。','ma mère · mon amie','mon amie 中 amie 仍是阴性。',20],
+ ['基本句子结构','简单陈述句通常主语—动词—宾语。重读代词 moi/toi 可用于强调，不能直接替换普通主语。','Je regarde un film.','不是 Moi regarde un film。',16]
+].map(([title,rule,example,error,day],i)=>({id:`g${i}`,title:String(title),rule:String(rule),example:String(example),error:String(error),day:Number(day),prerequisite:Number(day)>1?Number(day)-1:1}));

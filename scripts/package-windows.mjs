@@ -1,0 +1,14 @@
+import {cpSync,existsSync,mkdirSync,writeFileSync,rmSync,readdirSync} from 'node:fs';
+import {resolve,join} from 'node:path';
+const target=resolve(process.env.BONJOURLAB_PACKAGE_DIR||'dist/BonjourLab');
+if(existsSync(target))throw Error('打包目录已经存在，请指定新的 BONJOURLAB_PACKAGE_DIR，避免覆盖文件。');
+mkdirSync(target,{recursive:true});
+cpSync('.next/standalone',join(target,'app'),{recursive:true,filter:source=>!source.split(/[\\/]/).pop().startsWith('.env')});
+cpSync('scripts/portable/launch.mjs',join(target,'launch.mjs'));
+cpSync('scripts/init-db.mjs',join(target,'init-db.mjs'));
+for(const name of ['README.md','IMPLEMENTATION_STATUS.md'])cpSync(name,join(target,name));
+cpSync('.env.example',join(target,'.env.example'));
+mkdirSync(join(target,'data'));
+writeFileSync(join(target,'启动 BonjourLab.cmd'),'@echo off\r\nchcp 65001 >nul\r\ncd /d "%~dp0"\r\nif not exist "runtime\\node.exe" (\r\n echo 请先完整解压 BonjourLab 文件夹，再双击启动。\r\n pause\r\n exit /b 1\r\n)\r\n"runtime\\node.exe" "launch.mjs"\r\nif errorlevel 1 (\r\n echo 启动未完成，请查看上方提示，或把错误信息发给开发者。\r\n pause\r\n)\r\n','utf8');
+writeFileSync(join(target,'先看这里.txt'),'BonjourLab 法语学习平台 · Windows 64 位免安装包\r\n\r\n1. 右键 ZIP 压缩包，选择“全部解压”。不要直接在压缩包里启动。\r\n2. 打开解压后的 BonjourLab 文件夹，双击“启动 BonjourLab.cmd”。\r\n3. 浏览器会自动打开，点击“开始第一节课”即可学习。\r\n\r\n不需要安装 Node.js，不需要输入命令，不需要 AI 密钥。\r\n保持启动窗口打开；学习结束关闭窗口即可。\r\n学习记录保存在 data 文件夹，备份时请先关闭程序，再复制整个文件夹。\r\n下次仍双击同一个启动文件，进度不会丢失。\r\n\r\n本包不是安装器，不修改系统设置。Windows 可能提示确认下载文件来源；如果遇到拦截，不要关闭系统防护，请把完整提示发给开发者。\r\n\r\n适用 Windows 10/11 x64；macOS 或 ARM 电脑需要其他版本。\r\n','utf8');
+console.log(target);

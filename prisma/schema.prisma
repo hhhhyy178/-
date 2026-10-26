@@ -1,0 +1,50 @@
+generator client {
+ provider = "prisma-client-js"
+}
+datasource db {
+ provider = "sqlite"
+
+}
+model UserProfile {
+ id Int @id @default(1)
+ name String @default("学习者")
+ goal Int @default(15)
+}
+model LessonProgress {
+ lessonId String @id
+ completedAt DateTime @default(now())
+}
+model ExerciseAttempt {
+ id Int @id @default(autoincrement())
+ exerciseId String
+ knowledgeId String
+ skill String
+ answer String
+ correct Boolean
+ createdAt DateTime @default(now())
+}
+model VocabularyReviewState {
+ wordId String @id
+ repetitions Int @default(0)
+ interval Int @default(0)
+ ease Float @default(2.5)
+ due DateTime @default(now())
+}
+model ReviewHistory {
+ id Int @id @default(autoincrement())
+ wordId String
+ quality Int
+ createdAt DateTime @default(now())
+}
+model LearningSession {
+ id Int @id @default(autoincrement())
+ seconds Int
+ createdAt DateTime @default(now())
+}
+model AIConversation {
+ id Int @id @default(autoincrement())
+ mode String
+ question String
+ answer String
+ createdAt DateTime @default(now())
+}
