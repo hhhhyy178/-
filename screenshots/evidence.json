@@ -1,0 +1,77 @@
+{
+  "contract": "../design-contract.md",
+  "targetViewports": [
+    "320x844",
+    "375x844",
+    "390x844",
+    "768x900",
+    "1280x900",
+    "1440x900"
+  ],
+  "accessibility": {
+    "status": "pass",
+    "evidence": "Named native buttons and radio/input controls; stage title receives programmatic focus (checks.json); reduced-motion rule; primary controls >=44px. Body/secondary colors checked for contrast. This is a targeted check, not full VoiceOver/WCAG certification."
+  },
+  "responsive": {
+    "status": "pass",
+    "evidence": "Home and lesson at six widths, checks.json: no horizontal overflow. Screenshot review of mobile/tablet/desktop and light/dark."
+  },
+  "contentStates": {
+    "loading": {
+      "status": "pass",
+      "evidence": "MobileStatus displays cache progress until service worker ready; observed during initial capture."
+    },
+    "empty": {
+      "status": "pass",
+      "evidence": "home-390.png has 0 completed and an explanation of when vocabulary appears."
+    },
+    "error": {
+      "status": "pass",
+      "evidence": "quiz-error-390.png: wrong answer gives hint; browser test verifies second-error answer reveal."
+    },
+    "partial": {
+      "status": "pass",
+      "evidence": "audio.spec.ts removes system speechSynthesis; bundled audio still plays offline."
+    },
+    "success": {
+      "status": "pass",
+      "evidence": "quiz-success-390.png plus persisted completion and restore assertions in offline.spec.ts."
+    },
+    "permission": {
+      "status": "pass",
+      "evidence": "Desktop browser test removes microphone access: Recorder explains unsupported capture and text alternative."
+    }
+  },
+  "renderedEvidence": [
+    {
+      "viewport": "320x844",
+      "artifact": "home-320.png",
+      "observation": "Real built PWA with current lesson, explicit next action, review and persisted-progress area; checks.json confirms no horizontal overflow."
+    },
+    {
+      "viewport": "375x844",
+      "artifact": "home-375.png",
+      "observation": "Real built PWA with current lesson, explicit next action, review and persisted-progress area; checks.json confirms no horizontal overflow."
+    },
+    {
+      "viewport": "390x844",
+      "artifact": "home-390.png",
+      "observation": "Real built PWA with current lesson, explicit next action, review and persisted-progress area; checks.json confirms no horizontal overflow."
+    },
+    {
+      "viewport": "768x900",
+      "artifact": "home-768.png",
+      "observation": "Real built PWA with current lesson, explicit next action, review and persisted-progress area; checks.json confirms no horizontal overflow."
+    },
+    {
+      "viewport": "1280x900",
+      "artifact": "home-1280.png",
+      "observation": "Real built PWA with current lesson, explicit next action, review and persisted-progress area; checks.json confirms no horizontal overflow."
+    },
+    {
+      "viewport": "1440x900",
+      "artifact": "home-1440.png",
+      "observation": "Real built PWA with current lesson, explicit next action, review and persisted-progress area; checks.json confirms no horizontal overflow."
+    }
+  ]
+}

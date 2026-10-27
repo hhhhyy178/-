@@ -6,11 +6,13 @@
 
 手机端已经提供可添加到主屏幕的本地离线网页版本，无需 Windows 程序。详见 **[手机使用与部署说明](MOBILE_README.md)**。
 
-首次启用 GitHub Pages 需要仓库所有者在 [Pages 设置](https://github.com/hhhhyy178/-/settings/pages) 选择 **main /docs** 并保存；启用后通过 **https://hhhhyy178.github.io/-/** 使用。学习数据只存在手机本地，不会自动同步其他设备；支持 JSON 备份迁移。
+GitHub Pages 已开启，通过 **https://hhhhyy178.github.io/-/** 使用。学习数据只存在手机本地，不会自动同步其他设备；支持 JSON 备份迁移。
+
+新版采用分步教学、一题一屏、错题提示，附 194 条法语示范（原速和慢读共 388 段，可离线）。开发技能来源见 [skills](skills/README.md)，设计规范见 [DESIGN.md](DESIGN.md)。
 
 ## 免安装包：只需下载、解压、双击
 
-**[直接下载 Windows 免安装包（约 65 MB）](https://github.com/hhhhyy178/-/raw/refs/heads/main/downloads/BonjourLab-Windows.zip)** · [下载目录与说明](downloads/README.md)
+**[直接下载 Windows 免安装包（约 68 MB）](https://github.com/hhhhyy178/-/raw/refs/heads/main/downloads/BonjourLab-Windows.zip)** · [下载目录与说明](downloads/README.md)
 
 
 如果你拿到的是 BonjourLab-Windows.zip，不需要安装任何开发工具：右键压缩包选择「全部解压」，打开 BonjourLab 文件夹，双击「启动 BonjourLab.cmd」。浏览器会自动打开。首次启动会自动创建 data/bonjourlab.db，学习记录以后都存在 data 文件夹。保持启动窗口开启，学习结束关闭它即可。适用于 Windows 10/11 x64。下面的开发环境安装说明仅适用于源码版本。

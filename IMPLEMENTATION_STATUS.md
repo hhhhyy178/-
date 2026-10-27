@@ -71,3 +71,12 @@
 - 手机数据不上传 GitHub，不会自动与电脑或其他设备同步。平台清理网站存储可能导致记录丢失，界面与说明均提示备份。
 - 已通过 4 项手机学习逻辑测试及 iPhone 尺寸浏览器完整离线测试：断网答题、关闭页面重开、真实 IndexedDB 保存、课程解锁、复习日期、下载/恢复备份、本地教师和无后端 API 请求。
 - GitHub 管理 API 返回 Pages 创建权限 403，无法用当前连接代替所有者开启网站。静态产物可由仓库 main /docs 直接发布，启用步骤见 MOBILE_README.md。尚不宣称公网网址已可用。
+
+## 2026-10-27 学习体验重做
+
+- 11 项指定技能源码已归档 `skills/`，含提交号与许可。DeepTutor 官方完整项目下载在开发工作区，社区 skill 明确标注来源，未声称离线运行其后端。
+- 28 节中文场景、短句拆解、跟读与单题流程；错题先提示，二次错误可看答案；重音输入按钮、回看讲解、进度保存。
+- 194 条固定法语示范 × 原速/慢读 = 388 MP3；约 4 MB，随 PWA 预缓存。音源 Piper SIWIS fr_FR medium，合成而非真人；版权与生成说明在 public/audio/ATTRIBUTION.txt。模型发布摘要核验通过。播放器防叠音、可停止，支持系统法语声音选择。
+- 重新构建 docs 静态站点和 Windows ZIP。Windows EXE 未在本 Linux 环境原生执行；生产 Next 构建及浏览器行为已验证。
+- 仓库改名 GitHub API 请求返回 403 Resource not accessible by integration，尚未改名。静态资源与范围音频已验证同时支持 /-/ 和 /BonjourLab/，所有者改名后需重添 iPhone 主屏幕入口。
+- 验证范围与局限见 DESIGN_REVIEW.md；这次验证不等于实体 iPhone 听音评审。

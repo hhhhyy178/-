@@ -1,0 +1,75 @@
+[
+  {
+    "name": "DeepTutor",
+    "repository": "https://github.com/ndpvt-web/deeptutor-claude-skill.git",
+    "commit": "f60c18da8948ab7f1310bcb595388392926774cf",
+    "path": "."
+  },
+  {
+    "name": "frontend-design-direction",
+    "repository": "https://github.com/affaan-m/ECC.git",
+    "commit": "25278e7d7b6cf6e6a4e7a6c8e10f14ff22f0eb5b",
+    "path": "skills/frontend-design-direction"
+  },
+  {
+    "name": "frontend-design",
+    "repository": "https://github.com/anthropics/skills.git",
+    "commit": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+    "path": "skills/frontend-design"
+  },
+  {
+    "name": "ui-ux-pro-max",
+    "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+    "commit": "28b3b8dee8c976df4fa3e94aed4e092ad43fcb03",
+    "path": ".claude/skills/ui-ux-pro-max"
+  },
+  {
+    "name": "design-review",
+    "repository": "https://github.com/julianoczkowski/designer-skills.git",
+    "commit": "c259656c76d9758d7ead46b0d2f125cbe84f8665",
+    "path": "design-review"
+  },
+  {
+    "name": "frontend-ui-engineering",
+    "repository": "https://github.com/lll0k0lad/agent-skills.git",
+    "commit": "65091304f5c319837bd3d5d2944a7f25f661f69e",
+    "path": "skills/frontend-ui-engineering"
+  },
+  {
+    "name": "reference-design-contract",
+    "repository": "https://github.com/nexu-io/open-design.git",
+    "commit": "b7c5dd6d350bf54587a76bef1899bcbc183ea59d",
+    "path": "skills/reference-design-contract"
+  },
+  {
+    "name": "taste-skill",
+    "repository": "https://github.com/Leonxlnx/taste-skill.git",
+    "commit": "12af471f627f866411b4bd785b19646d3672784c",
+    "path": "skills/taste-skill"
+  },
+  {
+    "name": "impeccable",
+    "repository": "https://github.com/pbakaus/impeccable.git",
+    "commit": "d34c87e1a00989ae8dbdd7f6b30b70f23319e860",
+    "path": "plugin/skills/impeccable"
+  },
+  {
+    "name": "emil-design-eng",
+    "repository": "https://github.com/emilkowalski/skills.git",
+    "commit": "2d228630ba1446365f614a108cb8252f1feda202",
+    "path": "skills/emil-design-eng"
+  },
+  {
+    "name": "shadcn",
+    "repository": "https://github.com/shadcn-ui/ui",
+    "commit": "d094cd36caf871f2fde3e339b87aa43b9af5a7d0",
+    "path": "skills/shadcn"
+  },
+  {
+    "name": "DeepTutor full project (workspace reference)",
+    "repository": "https://github.com/HKUDS/DeepTutor",
+    "commit": "a31d82624c27d75f4e771d4fcb78dce16470b383",
+    "workspace_path": "/workspace/skill-sources/HKUDS-DeepTutor",
+    "note": "Full server application; not installed into the static mobile runtime."
+  }
+]

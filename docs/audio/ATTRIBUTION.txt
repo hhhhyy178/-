@@ -1,0 +1,15 @@
+BonjourLab course speech — generated, not human recordings.
+Voice: Piper fr_FR-siwis-medium, one French speaker, 22,050 Hz.
+Piper: https://github.com/rhasspy/piper
+ONNX distribution: https://github.com/k2-fsa/sherpa-onnx/releases/tag/tts-models
+Model archive: vits-piper-fr_FR-siwis-medium.tar.bz2
+SHA-256: 375909aa30842b3a4efa10b1beb1d761af792960ae6873b4d53889f96c66195b
+Digest verified against the GitHub release asset digest.
+SIWIS French Speech Synthesis Database: https://datashare.is.ed.ac.uk/handle/10283/2353
+Dataset license: Creative Commons Attribution 4.0 International.
+License: https://creativecommons.org/licenses/by/4.0/
+Dataset creators: Pierre-Edouard Honnet, Alexandros Lazaridis, Philip N. Garner, Junichi Yamagishi.
+Model card source: the archive's MODEL_CARD (copied as MODEL_CARD.txt).
+Transformation: neural speech synthesis of BonjourLab teaching text using sherpa-onnx 1.12.40;
+peak normalized to 0.9 and encoded as MP3 64 kbit/s. Slow versions generated at speed 0.8.
+No claim of endorsement or human pronunciation review.

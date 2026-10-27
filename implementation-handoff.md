@@ -1,0 +1,1 @@
+读 DESIGN.md 和 skills/sources.json。保持 Next + React + 原生 CSS、IndexedDB/SQLite 兼容。固定音频放 public/audio，构建时复制至 docs/audio 并随 Service Worker 缓存。GuidedLesson 只显示当前教学步骤/一道题，保留题目 ID 与后台评分。手机四项底栏，更多内含原功能。保持 /-/ 与 /BonjourLab/ 相对 URL。运行 npm test、npm run test:mobile、npm run test:e2e、npm run build，观察截图与真实离线音频。
