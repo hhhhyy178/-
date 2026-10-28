@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'tests/production',workers:1,use:{baseURL:'http://127.0.0.1:3103',viewport:{width:1440,height:1000},launchOptions:{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH||'/usr/bin/chromium'}},webServer:{command:'node scripts/init-db.mjs && node scripts/start-server.mjs',url:'http://127.0.0.1:3103',reuseExistingServer:false,env:{DATABASE_URL:'file:/tmp/bonjourlab-desktop-check.db',PORT:'3103',BONJOURLAB_HOST:'127.0.0.1'},timeout:120000}});

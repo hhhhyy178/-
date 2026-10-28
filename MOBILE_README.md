@@ -62,3 +62,9 @@ PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:mobile
 当前集成的改名请求被 GitHub 以 403 拒绝。所有者打开 [仓库设置](https://github.com/hhhhyy178/-/settings)，在 **General → Repository name** 把 `-` 改为 `BonjourLab`，点旁边的 **Rename**（不是 Rename branch）。改名后 Pages 地址为 `https://hhhhyy178.github.io/BonjourLab/`，等待重新发布并确认能打开后再使用。应用资源均为相对路径，已在两个路径验证。
 
 改名前先导出 JSON 备份。改名后重新用 Safari 添加主屏幕图标；旧图标仍指向旧地址。普通同域浏览器的 IndexedDB 不按路径区分，但 iOS 主屏幕入口可能使用不同存储空间，必要时导入备份。仓库地址的自动重定向不代表旧 Pages 地址也会跳转。
+
+## 电脑浏览器看不到新版
+
+电脑网页和手机网页使用同一套界面，但旧离线缓存可能继续显示旧页面。先打开 `?view=more` 的学习工具页，联网等待更新提示，点击「更新课程并重载」或「更新并打开新版」。无需清除网站数据。完成后页脚应显示「柔边版画 2026.10.28.4」。本版将更新提示放到页面顶部，并在切回窗口时检查更新，点击后才重载，保留已保存进度。
+
+电脑 Next 生产服务另有验证：`npx playwright test --config playwright.production.config.ts`，使用独立临时数据库与端口 3103，不改动真实学习数据库。Windows 已解压程序不会因网页更新而自动替换程序文件；本节处理的是浏览器访问 GitHub Pages 的情况。

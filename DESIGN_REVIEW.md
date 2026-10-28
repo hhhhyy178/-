@@ -50,3 +50,11 @@ No physical iPhone / Safari listening review, VoiceOver testing or independent F
 实图：atelier-home-{320,390,768,1440}.png 与对应课程截图；最终手机首屏 atelier-phone.png。首轮各宽度无横向溢出、图片解码为 1536px、无 pageerror。AI 图像为本项目原创生成，不冒充历史版画或真人作品。设计采用 frontend-design 的「题材资产」原则与 Impeccable 的实际渲染审查。
 
 最终检查：20 项数据与课程测试、3 项手机端离线流程、2 项桌面学习流程及 Next 生产构建通过。手机离线测试新增断网重载后插图 naturalWidth=1536、Cormorant 字体加载断言。最终截图含浅色与 atelier-dark-390.png；插图约 528 KiB 并随站点自托管，发布时不依赖图像生成服务。Windows 包也已同步此视觉，未在本 Linux 环境运行 Windows 可执行程序。
+
+## 2026-10-28 图片柔边与电脑浏览器更新
+
+用户明确反馈电脑浏览器看不到变化。检查发现旧 Service Worker 对导航优先返回旧缓存，而原更新按钮只在页底与更多里出现。无法直接观察用户浏览器，不能确认其本机缓存状态；现已增加全站顶部更新提示、切回窗口检查新版本与版本号，激活仍由用户点击，避免打断答题。
+
+插图由图像编辑工具重做为透明墨线渐隐；WebP 保留 alpha，左上角 alpha=0。渲染改用 contain 显示整张画，禁止 cover 再次裁掉透明边缘。桌面生产服务单独测试：实际 / 页面加载新版插图、样式、版本号并可进入学习。截图 soft-print-desktop-production.png；网页响应式截图 soft-print-web-{320,390,1440}.png；手机首屏 soft-print-phone.png。
+
+新增真实 Service Worker 升级测试：先安装旧脚本、设置本机目标为 30，再提供新版脚本；顶部提示出现，点击激活重载后目标仍为 30。此前首次定位器把 HTML label 的 option 文本当作精确名称，已改用非精确可访问标签匹配；升级测试通过，没有关闭断言。
