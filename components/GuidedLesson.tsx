@@ -18,7 +18,7 @@ export default function GuidedLesson({lesson,attempts,completed,onSaved,onReview
   <div className="lesson-context"><span>第 {lesson.day} 课，共 28 课</span><span>{lesson.level} 入门</span></div>
   <h1>{lesson.title}</h1>
   <div className="lesson-steps" aria-label="学习步骤">{stages.map((label,i)=><button key={label} aria-current={step===i?'step':undefined} disabled={i>step&&!final} onClick={()=>move(i)}><span>{i<step?<Check size={14}/>:i+1}</span>{label}</button>)}</div>
-  <section className="lesson-stage" aria-labelledby="stage-title">
+  <section className={`lesson-stage stage-${step}`} aria-labelledby="stage-title">
    <h2 id="stage-title" tabIndex={-1} ref={heading}>{final?'本课已完成':stages[step]}</h2>
    {step===0&&<><p className="scene">{guide.scene}</p><div className="sentence-display"><p className="french" lang="fr">{lesson.example}</p><p>{lesson.translation}</p><Speak text={lesson.example}/></div><p className="lesson-tip">先听整句，不用急着记拼写。接下来会把它拆开讲。</p><button className="primary next-step" onClick={()=>move(1)}>看看这句话 <ArrowRight size={18}/></button></>}
    {step===1&&<><div className="sentence-parts">{guide.parts.map(part=><div key={part.fr}><p className="french" lang="fr">{part.fr}</p><p>{part.zh}</p><Speak text={part.fr}/></div>)}</div><p className="lesson-tip"><BookOpen size={18}/>{guide.tip}</p><details className="extra-explanation"><summary>展开完整讲解</summary><p>{lesson.explanation}</p></details><button className="primary next-step" onClick={()=>move(2)}>明白了，跟着读 <ArrowRight size={18}/></button></>}

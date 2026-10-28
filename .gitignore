@@ -12,3 +12,5 @@ next-env.d.ts
 dist/
 
 .taste-skill/
+
+__pycache__/
