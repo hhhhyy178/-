@@ -58,3 +58,7 @@ No physical iPhone / Safari listening review, VoiceOver testing or independent F
 插图由图像编辑工具重做为透明墨线渐隐；WebP 保留 alpha，左上角 alpha=0。渲染改用 contain 显示整张画，禁止 cover 再次裁掉透明边缘。桌面生产服务单独测试：实际 / 页面加载新版插图、样式、版本号并可进入学习。截图 soft-print-desktop-production.png；网页响应式截图 soft-print-web-{320,390,1440}.png；手机首屏 soft-print-phone.png。
 
 新增真实 Service Worker 升级测试：先安装旧脚本、设置本机目标为 30，再提供新版脚本；顶部提示出现，点击激活重载后目标仍为 30。此前首次定位器把 HTML label 的 option 文本当作精确名称，已改用非精确可访问标签匹配；升级测试通过，没有关闭断言。
+
+## 艺术手册构图调整
+
+根据用户反馈，将首页改为更自由的手册构图：放大法语主句、倾斜版画与复习纸片、以圆形按钮承载进入课程的动作，并在课程页延续手写章节标题。装饰文字与标签重叠的问题已在实图复查后移除。手机与桌面生产截图保存在 screenshots/artwork-phone.png、screenshots/artwork-1440.png；320/390/1440 均检查横向溢出。手机 4 项流程和桌面生产验证通过。

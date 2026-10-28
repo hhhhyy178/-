@@ -11,6 +11,6 @@ test('电脑浏览器：顶部发现新版，手动更新后保留本机目标',
  await page.getByRole('button',{name:'今天学习',exact:true}).click();serveOld=false;
  await page.evaluate(async()=>{const reg=await navigator.serviceWorker.getRegistration();await reg!.update()});
  await expect(page.getByRole('button',{name:'更新并打开新版',exact:true})).toBeVisible();await page.screenshot({path:'screenshots/soft-print-desktop-update.png',fullPage:true});await page.getByRole('button',{name:'更新并打开新版',exact:true}).click();
- await expect(page.getByText('柔边版画 2026.10.28.4',{exact:true})).toBeVisible();await expect(page.getByRole('button',{name:'更新并打开新版',exact:true})).toHaveCount(0);
+ await expect(page.getByText('艺术手册 2026.10.28.5',{exact:true})).toBeVisible();await expect(page.getByRole('button',{name:'更新并打开新版',exact:true})).toHaveCount(0);
  await page.getByRole('button',{name:'设置与工具',exact:true}).click();await expect(page.getByLabel('每日目标')).toHaveValue('30');
 });
