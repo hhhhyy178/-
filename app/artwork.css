@@ -8,3 +8,5 @@ html[data-theme=dark]{--bg:#19201e;--paper:#f3f0e6;--review:#2d3b30;--blue:#b0c4
 .print-note{left:8%;right:auto;top:2%}.paris-print figcaption{padding-bottom:16px}.art-cover .home-start{transform:none}.art-cover .home-start:active:not(:disabled){transform:scale(.97)}
 @media(max-width:650px){.paris-print{margin-bottom:4px}.paris-print figcaption{padding-bottom:12px}.print-note{left:8%;right:auto;top:0}}
 @media(prefers-reduced-motion:reduce){.art-cover .home-start:active:not(:disabled){transform:none}}
+.print-note{top:12%}
+@media(max-width:650px){.print-note{top:12%}}
