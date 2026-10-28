@@ -37,3 +37,16 @@ No physical iPhone / Safari listening review, VoiceOver testing or independent F
 实际应用 frontend-design 的内容与字体原则、UI/UX Pro Max 的 typography 检索、emil-design-eng 的可中断反馈与克制动画，以及 Impeccable craft-floor。没有声称 11 个工具都已成功执行。设计主规范以更新后的 DESIGN.md 为准。字体压缩的可选尝试缺少 Brotli，保留原始 TTF 与许可，未影响字体加载与离线验证。
 
 最终生产构建通过；20 项数据与内容测试、3 项手机流程、2 项桌面流程通过。实图记录：`editorial-home-{320,375,390,768,1440}.png`、对应 lesson 截图、`editorial-dark-390.png`、`editorial-phone.png`、`editorial-settings.png`。所有检查宽度无横向溢出；`editorial-long-320.png` 为以第 28 课真实文本替换展示区的排版压力检查，非用户实际学习进度。设计报告不将「高级」当成可由自动测试证明的结论，最终审美由用户评判。
+
+## 2026-10-28 法国艺术手册方向
+
+| Before | After | Why |
+| --- | --- | --- |
+| 排版与配色承担全部视觉 | 原创巴黎版画与法语主句组成封面，约 528 KiB WebP | 让法国艺术成为真实内容资产 |
+| 灰白工具界面 | 纸色、钴蓝墨色、植物绿词汇页 | 用统一的印刷与手册语境贯穿界面 |
+| 首页与课程只有一般标题 | 四章法文题签、手册页脚、同源字体和墨色 | 跨页面延续身份，不把绘画压在练习正文上 |
+| 静态资源更新只看代码 | 插图摘要参与离线版本号并预缓存 | 更新与离线使用能拿到一致视觉资产 |
+
+实图：atelier-home-{320,390,768,1440}.png 与对应课程截图；最终手机首屏 atelier-phone.png。首轮各宽度无横向溢出、图片解码为 1536px、无 pageerror。AI 图像为本项目原创生成，不冒充历史版画或真人作品。设计采用 frontend-design 的「题材资产」原则与 Impeccable 的实际渲染审查。
+
+最终检查：20 项数据与课程测试、3 项手机端离线流程、2 项桌面学习流程及 Next 生产构建通过。手机离线测试新增断网重载后插图 naturalWidth=1536、Cormorant 字体加载断言。最终截图含浅色与 atelier-dark-390.png；插图约 528 KiB 并随站点自托管，发布时不依赖图像生成服务。Windows 包也已同步此视觉，未在本 Linux 环境运行 Windows 可执行程序。
